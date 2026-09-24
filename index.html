@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+/* Public github.io → authenticated console (cheap redirect; gate enforces auth) */
+(function () {
+  try {
+    if (location.hostname === "elephantharbor.github.io") {
+      location.replace(
+        "https://console.elephantharbor.com" +
+          location.pathname +
+          location.search +
+          location.hash
+      );
+    }
+  } catch (e) {}
+})();
+</script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harbor Eats — Operating dashboard</title>
+  <meta name="description" content="Harbor Eats operating dashboard — on-demand meal plans, preferences, and recipes for Tom and Renata." />
+  <link rel="stylesheet" href="https://elephantharbor.github.io/shared/eh-console.css?v=20260911av" />
+  <script>(function(){try{var t=localStorage.getItem('eh-console-theme');document.documentElement.setAttribute('data-theme',(t==='light'||t==='dark')?t:'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+  <link rel="stylesheet" href="static/segment.css" />
+</head>
+<body class="eh-eats">
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark">HE</span>
+      <div>
+        <h1>Harbor Eats</h1>
+        <p class="sub">On-demand meal plans · Tom &amp; Renata</p>
+      </div>
+    </div>
+    <div class="top-meta">
+      <span class="badge badge-eats">EATS</span>
+      <span class="muted" id="last-updated">—</span>
+    </div>
+  </header>
+
+  <a class="skip-link" href="#app">Skip to content</a>
+  <nav class="wayhome" aria-label="Elephant Harbor">
+    <a data-segment="portfolio" href="https://console.elephantharbor.com/">Elephant Harbor / Portfolio</a>
+    <span class="sep" aria-hidden="true">/</span>
+    <a data-segment="capital" href="https://console.elephantharbor.com/harbor-capital-desk/">Capital</a>
+    <a data-segment="presence" href="https://console.elephantharbor.com/harbor-presence/">Presence</a>
+    <a data-segment="foundry" href="https://console.elephantharbor.com/harbor-foundry/">Foundry</a>
+    <a data-segment="local" href="https://console.elephantharbor.com/harbor-local/">Local</a>
+    <a data-segment="eats" href="https://console.elephantharbor.com/harbor-eats/" class="active" aria-current="page">Eats</a>
+  </nav>
+
+  <nav class="nav" id="nav" aria-label="Primary views">
+    <button type="button" data-view="overview" class="active">Overview</button>
+    <button type="button" data-view="plans">Plans</button>
+    <button type="button" data-view="recipes">Recipes</button>
+    <button type="button" data-view="preferences">Preferences</button>
+    <button type="button" data-view="lessons">Lessons</button>
+    <button type="button" data-view="log">Log</button>
+    <button type="button" data-view="docs">Docs</button>
+  </nav>
+
+  <main id="app">
+    <p class="loading">Loading snapshot…</p>
+  </main>
+
+  <footer class="foot">
+    <span>Public-safe operating view · No secrets · Real metrics only · Source: Harbor Eats ops snapshot · Dedicated repo harbor-eats</span>
+  </footer>
+
+  <script src="https://elephantharbor.github.io/shared/eh-theme.js?v=20260911av"></script>
+  <script src="https://elephantharbor.github.io/shared/eh-session-log.js?v=20260911av"></script>
+  <script src="https://elephantharbor.github.io/shared/eh-active-ventures.js?v=20260911av"></script>
+
+  <script src="static/app.js?v=20260924he"></script>
+</body>
+</html>
