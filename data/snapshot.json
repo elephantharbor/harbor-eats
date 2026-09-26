@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T19:17:26Z",
+  "generatedAt": "2026-09-26T15:41:00Z",
   "segmentId": "eats",
   "segmentName": "Harbor Eats",
   "operatingMode": "on_demand",
@@ -18,27 +18,29 @@
     "fish_based_ok": true
   },
   "counters": {
-    "plans_generated": 2,
-    "meal_options_generated": 6,
+    "plans_generated": 3,
+    "meal_options_generated": 9,
     "selections_recorded": 0,
     "plans_selected": 0,
     "plans_cooked": 0,
     "plans_rated": 0,
     "ratings_received": 0,
-    "active_unselected_plans": 2,
+    "active_unselected_plans": 3,
     "archived_plans": 0,
     "skipped_plans": 0
   },
   "activePlanIds": [
     "HE-2026-09-23-P01",
-    "HE-2026-09-24-P01"
+    "HE-2026-09-24-P01",
+    "HE-2026-09-26-P01"
   ],
+  "batchId": "HE-WEEK-2026-09-26",
   "plans": [
     {
       "plan_id": "HE-2026-09-23-P01",
       "created_date": "2026-09-23",
       "status": "Unselected",
-      "batch_id": null,
+      "batch_id": "HE-WEEK-2026-09-26",
       "options": [
         {
           "meal_option_id": "HE-2026-09-23-P01-A",
@@ -46,7 +48,7 @@
           "name": "Crispy Chipotle Tofu Tacos with Lime Slaw",
           "recipe_slug": "crispy-chipotle-tofu-tacos",
           "recipe_version": "v1",
-          "description_short": "Crispy Chipotle Tofu Tacos with Lime Slaw \u2014 Mexican tacos (moderate); 20 min prep + 20 min cook.",
+          "description_short": "Crispy Chipotle Tofu Tacos with Lime Slaw — Mexican tacos (moderate); 20 min prep + 20 min cook.",
           "attributes": {
             "slug": "crispy-chipotle-tofu-tacos",
             "name": "Crispy Chipotle Tofu Tacos with Lime Slaw",
@@ -90,7 +92,7 @@
           "name": "Blackstone Miso-Ginger Salmon with Blistered Bok Choy",
           "recipe_slug": "blackstone-miso-ginger-salmon",
           "recipe_version": "v1",
-          "description_short": "Blackstone Miso-Ginger Salmon with Blistered Bok Choy \u2014 Japanese-inspired plated_entree (moderate); 15 min prep + 20 min cook.",
+          "description_short": "Blackstone Miso-Ginger Salmon with Blistered Bok Choy — Japanese-inspired plated_entree (moderate); 15 min prep + 20 min cook.",
           "attributes": {
             "slug": "blackstone-miso-ginger-salmon",
             "name": "Blackstone Miso-Ginger Salmon with Blistered Bok Choy",
@@ -134,7 +136,7 @@
           "name": "Coconut Chickpea & Spinach Curry with Basmati",
           "recipe_slug": "coconut-chickpea-spinach-curry",
           "recipe_version": "v1",
-          "description_short": "Coconut Chickpea & Spinach Curry with Basmati \u2014 Indian-inspired curry (easy); 15 min prep + 25 min cook.",
+          "description_short": "Coconut Chickpea & Spinach Curry with Basmati — Indian-inspired curry (easy); 15 min prep + 25 min cook.",
           "attributes": {
             "slug": "coconut-chickpea-spinach-curry",
             "name": "Coconut Chickpea & Spinach Curry with Basmati",
@@ -180,14 +182,14 @@
         "renata": null
       },
       "qualitative": [],
-      "notes": "Migrated from history/2026-09-23.json; no selection or ratings recorded.",
+      "notes": "Migrated from history/2026-09-23.json; no selection or ratings recorded. Included in week batch HE-WEEK-2026-09-26 (reused Unselected queue).",
       "source_history": "history/2026-09-23.json"
     },
     {
       "plan_id": "HE-2026-09-24-P01",
       "created_date": "2026-09-24",
       "status": "Unselected",
-      "batch_id": null,
+      "batch_id": "HE-WEEK-2026-09-26",
       "options": [
         {
           "meal_option_id": "HE-2026-09-24-P01-A",
@@ -195,7 +197,7 @@
           "name": "Blackstone Ginger-Scallion Broccoli & Shiitake Rice Bowls",
           "recipe_slug": "blackstone-ginger-shiitake-broccoli-bowls",
           "recipe_version": "v1",
-          "description_short": "Blackstone Ginger-Scallion Broccoli & Shiitake Rice Bowls \u2014 Chinese-inspired bowl (moderate); 15 min prep + 20 min cook.",
+          "description_short": "Blackstone Ginger-Scallion Broccoli & Shiitake Rice Bowls — Chinese-inspired bowl (moderate); 15 min prep + 20 min cook.",
           "attributes": {
             "slug": "blackstone-ginger-shiitake-broccoli-bowls",
             "name": "Blackstone Ginger-Scallion Broccoli & Shiitake Rice Bowls",
@@ -241,7 +243,7 @@
           "name": "Tomato-Basil White Bean Rigatoni",
           "recipe_slug": "tomato-basil-white-bean-rigatoni",
           "recipe_version": "v1",
-          "description_short": "Tomato-Basil White Bean Rigatoni \u2014 Italian pasta (easy); 10 min prep + 25 min cook.",
+          "description_short": "Tomato-Basil White Bean Rigatoni — Italian pasta (easy); 10 min prep + 25 min cook.",
           "attributes": {
             "slug": "tomato-basil-white-bean-rigatoni",
             "name": "Tomato-Basil White Bean Rigatoni",
@@ -287,7 +289,7 @@
           "name": "Sheet-Pan Lemon-Dill Cod with Potatoes & Green Beans",
           "recipe_slug": "sheet-pan-lemon-dill-cod",
           "recipe_version": "v1",
-          "description_short": "Sheet-Pan Lemon-Dill Cod with Potatoes & Green Beans \u2014 Mediterranean plated_entree (easy); 15 min prep + 30 min cook.",
+          "description_short": "Sheet-Pan Lemon-Dill Cod with Potatoes & Green Beans — Mediterranean plated_entree (easy); 15 min prep + 30 min cook.",
           "attributes": {
             "slug": "sheet-pan-lemon-dill-cod",
             "name": "Sheet-Pan Lemon-Dill Cod with Potatoes & Green Beans",
@@ -335,8 +337,163 @@
         "renata": null
       },
       "qualitative": [],
-      "notes": "Day 2 preference discovery. Avoided yesterday cuisines/formats (Mexican tacos, Japanese salmon plate, Indian curry). 2026-09-23 still has no selection/ratings.",
+      "notes": "Day 2 preference discovery. Avoided yesterday cuisines/formats (Mexican tacos, Japanese salmon plate, Indian curry). 2026-09-23 still has no selection/ratings. Included in week batch HE-WEEK-2026-09-26 (reused Unselected queue).",
       "source_history": "history/2026-09-24.json"
+    },
+    {
+      "plan_id": "HE-2026-09-26-P01",
+      "created_date": "2026-09-26",
+      "status": "Unselected",
+      "batch_id": "HE-WEEK-2026-09-26",
+      "options": [
+        {
+          "meal_option_id": "HE-2026-09-26-P01-A",
+          "letter": "A",
+          "name": "Crispy Falafel Pita Wraps with Lemon Cashew-Tahini",
+          "recipe_slug": "crispy-falafel-pita-wraps",
+          "recipe_version": "v1",
+          "description_short": "Crispy Falafel Pita Wraps with Lemon Cashew-Tahini — Middle Eastern wraps (moderate); 20 min prep + 20 min cook.",
+          "attributes": {
+            "slug": "crispy-falafel-pita-wraps",
+            "name": "Crispy Falafel Pita Wraps with Lemon Cashew-Tahini",
+            "cuisine": "Middle Eastern",
+            "main_components": [
+              "chickpeas",
+              "pita",
+              "cucumber",
+              "cashews",
+              "tahini"
+            ],
+            "flavors": [
+              "herby",
+              "garlicky",
+              "tangy",
+              "savory"
+            ],
+            "textures": [
+              "crispy",
+              "creamy",
+              "crunchy"
+            ],
+            "technique": [
+              "air-fried",
+              "blended_sauce"
+            ],
+            "format": "wraps",
+            "effort": "moderate",
+            "prep_min": 20,
+            "cook_min": 20,
+            "protein_level": "high",
+            "fiber_level": "high",
+            "vegetable_density": "high",
+            "richness": "moderate",
+            "blackstone": false,
+            "dietary_ok": true,
+            "exploration": "cashew exception probe + Middle Eastern wrap format (vs prior tacos/pasta/bowls)"
+          },
+          "selected": false
+        },
+        {
+          "meal_option_id": "HE-2026-09-26-P01-B",
+          "letter": "B",
+          "name": "Blackstone Korean Gochujang-Glazed Trout with Sesame Cucumber Salad",
+          "recipe_slug": "blackstone-gochujang-trout",
+          "recipe_version": "v1",
+          "description_short": "Blackstone Korean Gochujang-Glazed Trout with Sesame Cucumber Salad — Korean-inspired plated_entree (moderate); 15 min prep + 20 min cook.",
+          "attributes": {
+            "slug": "blackstone-gochujang-trout",
+            "name": "Blackstone Korean Gochujang-Glazed Trout with Sesame Cucumber Salad",
+            "cuisine": "Korean-inspired",
+            "main_components": [
+              "trout",
+              "cucumber",
+              "rice",
+              "gochujang"
+            ],
+            "flavors": [
+              "sweet-heat",
+              "savory",
+              "garlicky",
+              "bright"
+            ],
+            "textures": [
+              "flaky",
+              "crisp-skin",
+              "crunchy"
+            ],
+            "technique": [
+              "griddled",
+              "quick_pickle"
+            ],
+            "format": "plated_entree",
+            "effort": "moderate",
+            "prep_min": 15,
+            "cook_min": 20,
+            "protein_level": "high",
+            "fiber_level": "moderate",
+            "vegetable_density": "moderate",
+            "richness": "moderate",
+            "blackstone": true,
+            "dietary_ok": true,
+            "exploration": "Korean sweet-heat + trout (vs prior salmon/cod) on Blackstone"
+          },
+          "selected": false
+        },
+        {
+          "meal_option_id": "HE-2026-09-26-P01-C",
+          "letter": "C",
+          "name": "Moroccan Spiced Lentil & Roasted Carrot Tagine with Couscous",
+          "recipe_slug": "moroccan-lentil-carrot-tagine",
+          "recipe_version": "v1",
+          "description_short": "Moroccan Spiced Lentil & Roasted Carrot Tagine with Couscous — Moroccan-inspired tagine (easy); 15 min prep + 30 min cook.",
+          "attributes": {
+            "slug": "moroccan-lentil-carrot-tagine",
+            "name": "Moroccan Spiced Lentil & Roasted Carrot Tagine with Couscous",
+            "cuisine": "Moroccan-inspired",
+            "main_components": [
+              "lentils",
+              "carrots",
+              "couscous",
+              "warm_spices"
+            ],
+            "flavors": [
+              "warm-spiced",
+              "savory",
+              "slightly_sweet",
+              "bright"
+            ],
+            "textures": [
+              "tender",
+              "stew-y",
+              "fluffy"
+            ],
+            "technique": [
+              "simmered",
+              "roasted"
+            ],
+            "format": "tagine",
+            "effort": "easy",
+            "prep_min": 15,
+            "cook_min": 30,
+            "protein_level": "moderate",
+            "fiber_level": "high",
+            "vegetable_density": "high",
+            "richness": "moderate",
+            "blackstone": false,
+            "dietary_ok": true,
+            "exploration": "North African spice stew + lentils (new legume vs chickpea/white bean)"
+          },
+          "selected": false
+        }
+      ],
+      "selected_meal_option_id": null,
+      "ratings": {
+        "tom": null,
+        "renata": null
+      },
+      "qualitative": [],
+      "notes": "Meal 3 of week batch HE-WEEK-2026-09-26. Diversified vs HE-2026-09-23-P01 and HE-2026-09-24-P01 (no Mexican/Japanese/Indian/Chinese/Italian/Mediterranean; no tacos/pasta/curry/rice-bowl/sheet-pan; new wrap/tagine formats; cashew + trout + lentil probes).",
+      "source_history": null
     }
   ],
   "recipes": [
@@ -344,37 +501,55 @@
       "slug": "blackstone-ginger-shiitake-broccoli-bowls",
       "version": "v1",
       "title": "Blackstone Ginger Shiitake Broccoli Bowls",
-      "bodyMd": "# Blackstone Ginger-Scallion Broccoli & Shiitake Rice Bowls\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-24\n\n## Attributes\ncuisine: Chinese-inspired | format: bowl | technique: griddled / stir-fried | effort: moderate\ncomponents: broccoli, shiitake, rice, scallions\nflavors: savory, gingery, garlicky, umami | textures: charred, tender-crisp\nnut-free, dairy-free, fish-free \u2014 no peanut sauce, no cashew garnish\n\n## Time\nPrep: 15 min | Cook: 20 min | Total: ~35 min | Difficulty: Moderate\n\n## Ingredients\n**Rice**\n- 1 cup dry jasmine rice, cooked per package (~3 cups cooked)\n\n**Veggies & aromatics**\n- 1 large head broccoli, cut into bite-size florets (about 4 cups)\n- 8 oz (225 g) shiitake mushrooms, stems removed, caps sliced\n- 1 red bell pepper, sliced thin (optional color)\n- 4 scallions, whites and greens separated, thinly sliced\n- 3 garlic cloves, minced\n- 1 tbsp grated fresh ginger\n- Neutral oil for the griddle (avocado, canola, or grapeseed)\n\n**Sauce**\n- 3 tbsp soy sauce or tamari\n- 1 tbsp rice vinegar\n- 1 tsp maple syrup or sugar\n- 1 tsp toasted sesame oil (seeds, not nuts \u2014 OK)\n- \u00bd tsp chili flakes or chili crisp without nuts (optional)\n- Pinch of white or black pepper\n\n**Finish**\n- Lime wedges\n- Optional: toasted sesame seeds (not nuts)\n- Do **not** add peanuts, peanut sauce, or cashews\n\n## Instructions\n1. Start rice so it finishes with the vegetables.\n2. Whisk sauce ingredients in a small bowl. Set aside.\n3. Preheat Blackstone flat-top to medium-high. Oil lightly.\n4. Spread broccoli in a hot zone; cook 4\u20135 minutes, tossing occasionally, until charred in spots and tender-crisp. Push to a cooler edge.\n5. Oil again if needed. Add shiitakes (and bell pepper if using). Cook 3\u20134 minutes until browned and softened. Add scallion whites, garlic, and ginger; cook 30\u201345 seconds until fragrant \u2014 don\u2019t burn the garlic.\n6. Pull everything together on the griddle. Pour sauce over; toss 30\u201360 seconds until glossy and lightly reduced.\n7. Bowl rice, pile vegetables on top, scatter scallion greens. Lime wedge and sesame seeds optional.\n\n**No Blackstone:** Use a large cast-iron or wok over high heat; same order (broccoli first, then mushrooms, aromatics last).\n\n## Nutrition perspective\nVegetable-forward, high fiber; plant protein from mushrooms and whatever else you add. Satisfying without dairy or nuts. Light-to-moderate richness from sesame oil and char.\n\n## Substitutions\nCremini or oyster mushrooms instead of shiitake. Snap peas or broccolini instead of broccoli. For more protein, add baked or air-fried extra-firm tofu cubes in the last toss (optional \u2014 tofu was probed yesterday).\n"
+      "bodyMd": "# Blackstone Ginger-Scallion Broccoli & Shiitake Rice Bowls\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-24\n\n## Attributes\ncuisine: Chinese-inspired | format: bowl | technique: griddled / stir-fried | effort: moderate\ncomponents: broccoli, shiitake, rice, scallions\nflavors: savory, gingery, garlicky, umami | textures: charred, tender-crisp\nnut-free, dairy-free, fish-free — no peanut sauce, no cashew garnish\n\n## Time\nPrep: 15 min | Cook: 20 min | Total: ~35 min | Difficulty: Moderate\n\n## Ingredients\n**Rice**\n- 1 cup dry jasmine rice, cooked per package (~3 cups cooked)\n\n**Veggies & aromatics**\n- 1 large head broccoli, cut into bite-size florets (about 4 cups)\n- 8 oz (225 g) shiitake mushrooms, stems removed, caps sliced\n- 1 red bell pepper, sliced thin (optional color)\n- 4 scallions, whites and greens separated, thinly sliced\n- 3 garlic cloves, minced\n- 1 tbsp grated fresh ginger\n- Neutral oil for the griddle (avocado, canola, or grapeseed)\n\n**Sauce**\n- 3 tbsp soy sauce or tamari\n- 1 tbsp rice vinegar\n- 1 tsp maple syrup or sugar\n- 1 tsp toasted sesame oil (seeds, not nuts — OK)\n- ½ tsp chili flakes or chili crisp without nuts (optional)\n- Pinch of white or black pepper\n\n**Finish**\n- Lime wedges\n- Optional: toasted sesame seeds (not nuts)\n- Do **not** add peanuts, peanut sauce, or cashews\n\n## Instructions\n1. Start rice so it finishes with the vegetables.\n2. Whisk sauce ingredients in a small bowl. Set aside.\n3. Preheat Blackstone flat-top to medium-high. Oil lightly.\n4. Spread broccoli in a hot zone; cook 4–5 minutes, tossing occasionally, until charred in spots and tender-crisp. Push to a cooler edge.\n5. Oil again if needed. Add shiitakes (and bell pepper if using). Cook 3–4 minutes until browned and softened. Add scallion whites, garlic, and ginger; cook 30–45 seconds until fragrant — don’t burn the garlic.\n6. Pull everything together on the griddle. Pour sauce over; toss 30–60 seconds until glossy and lightly reduced.\n7. Bowl rice, pile vegetables on top, scatter scallion greens. Lime wedge and sesame seeds optional.\n\n**No Blackstone:** Use a large cast-iron or wok over high heat; same order (broccoli first, then mushrooms, aromatics last).\n\n## Nutrition perspective\nVegetable-forward, high fiber; plant protein from mushrooms and whatever else you add. Satisfying without dairy or nuts. Light-to-moderate richness from sesame oil and char.\n\n## Substitutions\nCremini or oyster mushrooms instead of shiitake. Snap peas or broccolini instead of broccoli. For more protein, add baked or air-fried extra-firm tofu cubes in the last toss (optional — tofu was probed yesterday).\n"
+    },
+    {
+      "slug": "blackstone-gochujang-trout",
+      "version": "v1",
+      "title": "Blackstone Gochujang Trout",
+      "bodyMd": "# Blackstone Korean Gochujang-Glazed Trout with Sesame Cucumber Salad\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-26\n\n## Attributes\ncuisine: Korean-inspired | format: plated_entree | technique: griddled | effort: moderate\ncomponents: trout, cucumber, rice, gochujang\nflavors: sweet-heat, savory, garlicky, bright | textures: flaky, crisp-skin, crunchy\ndairy-free, nut-free; contains fish — no shellfish\n\n## Time\nPrep: 15 min | Cook: 20 min | Total: ~35 min | Difficulty: Moderate\n\n## Ingredients\n**Trout & glaze**\n- 2 trout fillets (5–6 oz / 140–170 g each), skin-on preferred (or arctic char)\n- 1½ tbsp gochujang (check label: no fish sauce with shellfish, no peanut)\n- 1 tbsp soy sauce or tamari\n- 1 tsp maple syrup or brown sugar\n- 1 tsp rice vinegar\n- 1 tsp grated fresh ginger\n- 1 small garlic clove, grated\n- 1 tsp toasted sesame oil (seeds — OK)\n- Neutral oil for the griddle\n- Salt and pepper\n\n**Sesame cucumber salad**\n- 1 large English cucumber (or 2 Persian), thinly sliced\n- 1 tbsp rice vinegar\n- 1 tsp soy sauce or tamari\n- ½ tsp maple syrup\n- ½ tsp toasted sesame oil\n- Pinch of salt and chili flakes\n- 1 tsp toasted sesame seeds (optional)\n\n**To serve**\n- ¾–1 cup dry jasmine rice, cooked (~2½–3 cups)\n- 2 scallions, thinly sliced\n- Lime wedges (optional)\n- Do **not** add peanuts, peanut sauce, or butter\n\n## Instructions\n1. Start rice. Toss cucumber salad ingredients; chill while cooking.\n2. Whisk gochujang, soy, maple, vinegar, ginger, garlic, and sesame oil into a glaze. Pat trout dry; lightly salt flesh. Brush glaze on flesh (reserve a spoonful for finish).\n3. Preheat Blackstone flat-top to medium-high. Oil lightly.\n4. Place trout skin-side down. Cook 3–4 minutes until skin crisps and flesh turns opaque ~⅔ up the side. Flip carefully; cook 1–2 minutes more until just flakes. Brush remaining glaze in the last 30 seconds. Rest 1–2 minutes off heat.\n5. Plate rice, trout, and cucumber salad. Scallions and sesame seeds on top.\n\n**No Blackstone:** Skillet medium-high, skin-side down first; same glaze timing. Broil 1 minute at the end if you want extra caramelization.\n\n## Nutrition perspective\nHigh-protein fish plate with cooling crunch; sweet-heat glaze for enjoyment without dairy or shellfish.\n\n## Substitutions\nSalmon works but this plan intentionally uses trout (vs prior salmon/cod). Firm white fish needs less glaze sweetness and shorter cook. Broccolini blistered on the side if you want a hot vegetable.\n"
     },
     {
       "slug": "blackstone-miso-ginger-salmon",
       "version": "v1",
       "title": "Blackstone Miso Ginger Salmon",
-      "bodyMd": "# Blackstone Miso-Ginger Salmon with Blistered Bok Choy\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-23\n\n## Attributes\ncuisine: Japanese-inspired | format: plated entr\u00e9e | technique: griddled | effort: moderate\ncomponents: salmon, bok choy, rice\nflavors: umami, savory, garlicky | textures: tender, charred\nnut-free, dairy-free; contains fish\n\n## Time\nPrep: 15 min | Cook: 20 min | Total: ~35 min | Difficulty: Moderate\n\n## Ingredients\n**Salmon & glaze**\n- 2 salmon fillets (5\u20136 oz / 140\u2013170 g each), skin-on preferred, pin bones removed\n- 1\u00bd tbsp white or yellow miso (check nut-free)\n- 1 tbsp mirin (or 1 tsp maple syrup + 1 tsp rice vinegar)\n- 1 tbsp soy sauce or tamari\n- 1 tsp grated fresh ginger\n- 1 small garlic clove, grated\n- 1 tsp toasted sesame oil (seeds, not nuts \u2014 OK)\n- Neutral oil for the griddle\n- Salt and pepper\n\n**Greens & rice**\n- 2\u20133 baby bok choy, halved lengthwise, rinsed well\n- 1 cup dry jasmine or short-grain rice, cooked per package (~3 cups cooked)\n- Lime or lemon wedges\n- Optional: sliced scallions, toasted sesame seeds\n\n## Instructions\n1. Cook rice so it finishes with the fish.\n2. Whisk miso, mirin, soy/tamari, ginger, garlic, and sesame oil into a smooth glaze. Pat salmon dry; lightly salt flesh side. Brush glaze on flesh.\n3. Preheat Blackstone flat-top to medium-high. Oil lightly.\n4. Place salmon skin-side down. Cook 4\u20135 minutes until skin crisps and flesh is opaque ~\u2154 up the side. Flip carefully; cook 2\u20133 minutes more until just opaque and flakes easily (internal ~125\u2013130\u00b0F / 52\u201354\u00b0C for medium). Brush remaining glaze in the last minute. Rest 2 minutes off heat.\n5. On a hot zone, oil lightly and blister bok choy cut-side down 2\u20133 minutes until charred, then flip 1\u20132 minutes until stems tender-crisp. Season with a pinch of salt and a drop of soy if desired.\n6. Plate rice, salmon, and bok choy. Scallions, sesame seeds, citrus wedge optional.\n\n**No Blackstone:** Same glaze; skillet medium-high, skin-side down first; broil bok choy or saut\u00e9.\n\n## Nutrition perspective\nHigh protein, omega-3 rich; vegetable side keeps the plate balanced. Comfort-level richness without heaviness.\n\n## Substitutions\nFirm white fish (cod, halibut) works; reduce cook time. Broccolini instead of bok choy.\n"
+      "bodyMd": "# Blackstone Miso-Ginger Salmon with Blistered Bok Choy\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-23\n\n## Attributes\ncuisine: Japanese-inspired | format: plated entrée | technique: griddled | effort: moderate\ncomponents: salmon, bok choy, rice\nflavors: umami, savory, garlicky | textures: tender, charred\nnut-free, dairy-free; contains fish\n\n## Time\nPrep: 15 min | Cook: 20 min | Total: ~35 min | Difficulty: Moderate\n\n## Ingredients\n**Salmon & glaze**\n- 2 salmon fillets (5–6 oz / 140–170 g each), skin-on preferred, pin bones removed\n- 1½ tbsp white or yellow miso (check nut-free)\n- 1 tbsp mirin (or 1 tsp maple syrup + 1 tsp rice vinegar)\n- 1 tbsp soy sauce or tamari\n- 1 tsp grated fresh ginger\n- 1 small garlic clove, grated\n- 1 tsp toasted sesame oil (seeds, not nuts — OK)\n- Neutral oil for the griddle\n- Salt and pepper\n\n**Greens & rice**\n- 2–3 baby bok choy, halved lengthwise, rinsed well\n- 1 cup dry jasmine or short-grain rice, cooked per package (~3 cups cooked)\n- Lime or lemon wedges\n- Optional: sliced scallions, toasted sesame seeds\n\n## Instructions\n1. Cook rice so it finishes with the fish.\n2. Whisk miso, mirin, soy/tamari, ginger, garlic, and sesame oil into a smooth glaze. Pat salmon dry; lightly salt flesh side. Brush glaze on flesh.\n3. Preheat Blackstone flat-top to medium-high. Oil lightly.\n4. Place salmon skin-side down. Cook 4–5 minutes until skin crisps and flesh is opaque ~⅔ up the side. Flip carefully; cook 2–3 minutes more until just opaque and flakes easily (internal ~125–130°F / 52–54°C for medium). Brush remaining glaze in the last minute. Rest 2 minutes off heat.\n5. On a hot zone, oil lightly and blister bok choy cut-side down 2–3 minutes until charred, then flip 1–2 minutes until stems tender-crisp. Season with a pinch of salt and a drop of soy if desired.\n6. Plate rice, salmon, and bok choy. Scallions, sesame seeds, citrus wedge optional.\n\n**No Blackstone:** Same glaze; skillet medium-high, skin-side down first; broil bok choy or sauté.\n\n## Nutrition perspective\nHigh protein, omega-3 rich; vegetable side keeps the plate balanced. Comfort-level richness without heaviness.\n\n## Substitutions\nFirm white fish (cod, halibut) works; reduce cook time. Broccolini instead of bok choy.\n"
     },
     {
       "slug": "coconut-chickpea-spinach-curry",
       "version": "v1",
       "title": "Coconut Chickpea Spinach Curry",
-      "bodyMd": "# Coconut Chickpea & Spinach Curry with Basmati\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-23\n\n## Attributes\ncuisine: Indian-inspired | format: curry | technique: simmered | effort: easy\ncomponents: chickpeas, spinach, coconut milk, rice\nflavors: aromatic, creamy, mildly spicy | textures: creamy, tender\nnut-free, dairy-free, fish-free \u2014 no cashew cream, no nut garnishes\n\n## Time\nPrep: 15 min | Cook: 25 min | Total: ~40 min | Difficulty: Easy\n\n## Ingredients\n- 1 tbsp coconut oil or olive oil\n- 1 small yellow onion, diced\n- 3 garlic cloves, minced\n- 1 tbsp grated fresh ginger\n- 1\u00bd tsp curry powder (confirm nut-free)\n- 1 tsp ground cumin\n- \u00bd tsp turmeric\n- \u00bc\u2013\u00bd tsp cayenne or chili flakes (optional)\n- 1 tbsp tomato paste\n- 1 can (15 oz / 425 g) chickpeas, drained and rinsed\n- 1 can (13.5 oz / 400 ml) full-fat coconut milk\n- \u00bd cup water or vegetable broth\n- 4 cups baby spinach (about 4 oz / 115 g)\n- 1 tbsp lime juice\n- Salt to taste\n- \u00be cup dry basmati rice, cooked\n- Fresh cilantro for serving (optional)\n- Do **not** add cashews, almonds, or peanut garnish\n\n## Instructions\n1. Start rice.\n2. Warm oil in a medium saucepan over medium heat. Soften onion 5\u20136 minutes. Add garlic and ginger; cook 1 minute.\n3. Stir in curry powder, cumin, turmeric, and cayenne 30 seconds until fragrant. Add tomato paste; cook 1 minute.\n4. Add chickpeas, coconut milk, and water/broth. Simmer gently 12\u201315 minutes until slightly thickened. Mash a few chickpeas against the pot for body.\n5. Fold in spinach until wilted, 1\u20132 minutes. Off heat, add lime juice and salt. Taste: more lime or salt as needed.\n6. Serve over basmati with cilantro if using.\n\n## Nutrition perspective\nHigh-fiber, vegetable-forward comfort food; plant protein from chickpeas; coconut makes it satisfying without dairy.\n\n## Substitutions\nKale or frozen spinach (squeezed dry) instead of baby spinach. Light coconut milk for a lighter bowl (sauce will be thinner).\n"
+      "bodyMd": "# Coconut Chickpea & Spinach Curry with Basmati\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-23\n\n## Attributes\ncuisine: Indian-inspired | format: curry | technique: simmered | effort: easy\ncomponents: chickpeas, spinach, coconut milk, rice\nflavors: aromatic, creamy, mildly spicy | textures: creamy, tender\nnut-free, dairy-free, fish-free — no cashew cream, no nut garnishes\n\n## Time\nPrep: 15 min | Cook: 25 min | Total: ~40 min | Difficulty: Easy\n\n## Ingredients\n- 1 tbsp coconut oil or olive oil\n- 1 small yellow onion, diced\n- 3 garlic cloves, minced\n- 1 tbsp grated fresh ginger\n- 1½ tsp curry powder (confirm nut-free)\n- 1 tsp ground cumin\n- ½ tsp turmeric\n- ¼–½ tsp cayenne or chili flakes (optional)\n- 1 tbsp tomato paste\n- 1 can (15 oz / 425 g) chickpeas, drained and rinsed\n- 1 can (13.5 oz / 400 ml) full-fat coconut milk\n- ½ cup water or vegetable broth\n- 4 cups baby spinach (about 4 oz / 115 g)\n- 1 tbsp lime juice\n- Salt to taste\n- ¾ cup dry basmati rice, cooked\n- Fresh cilantro for serving (optional)\n- Do **not** add cashews, almonds, or peanut garnish\n\n## Instructions\n1. Start rice.\n2. Warm oil in a medium saucepan over medium heat. Soften onion 5–6 minutes. Add garlic and ginger; cook 1 minute.\n3. Stir in curry powder, cumin, turmeric, and cayenne 30 seconds until fragrant. Add tomato paste; cook 1 minute.\n4. Add chickpeas, coconut milk, and water/broth. Simmer gently 12–15 minutes until slightly thickened. Mash a few chickpeas against the pot for body.\n5. Fold in spinach until wilted, 1–2 minutes. Off heat, add lime juice and salt. Taste: more lime or salt as needed.\n6. Serve over basmati with cilantro if using.\n\n## Nutrition perspective\nHigh-fiber, vegetable-forward comfort food; plant protein from chickpeas; coconut makes it satisfying without dairy.\n\n## Substitutions\nKale or frozen spinach (squeezed dry) instead of baby spinach. Light coconut milk for a lighter bowl (sauce will be thinner).\n"
     },
     {
       "slug": "crispy-chipotle-tofu-tacos",
       "version": "v1",
       "title": "Crispy Chipotle Tofu Tacos",
-      "bodyMd": "# Crispy Chipotle Tofu Tacos with Lime Slaw\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-23\n\n## Attributes\ncuisine: Mexican | format: tacos | technique: air-fried | effort: moderate\ncomponents: tofu, cabbage, corn tortillas\nflavors: smoky, spicy, tangy | textures: crispy, crunchy\nnut-free, dairy-free, fish-free\n\n## Time\nPrep: 20 min | Cook: 20 min | Total: ~40 min | Difficulty: Easy\u2013Moderate\n\n## Ingredients\n**Tofu**\n- 14 oz (400 g) extra-firm tofu, pressed 10\u201315 min, cut into \u00be-inch cubes\n- 1 tbsp olive oil or avocado oil\n- 1 tbsp cornstarch\n- 1\u20131\u00bd tsp chipotle powder (or 1 minced chipotle in adobo + 1 tsp sauce; check label for nuts)\n- 1 tsp smoked paprika\n- \u00be tsp ground cumin\n- \u00bd tsp garlic powder\n- \u00bd tsp kosher salt\n- \u00bc tsp black pepper\n- Juice of \u00bd lime\n\n**Slaw**\n- 3 cups shredded green cabbage (or coleslaw mix without nuts)\n- \u00bd cup shredded carrot\n- \u00bc cup chopped cilantro\n- 2 tbsp lime juice\n- 1 tbsp olive oil\n- \u00bd tsp maple syrup or agave (optional)\n- Salt and pepper to taste\n\n**To serve**\n- 6 small corn tortillas (warmed)\n- 1 ripe avocado, sliced\n- Lime wedges\n- Hot sauce (optional; check nut-free)\n\n## Instructions\n1. Press tofu, cube, and pat dry. Toss with oil, cornstarch, chipotle, paprika, cumin, garlic powder, salt, and pepper until coated.\n2. Air fry at 400\u00b0F (200\u00b0C) for 14\u201318 minutes, shaking halfway, until edges are deep golden and crisp. (Pan method: nonstick skillet over medium-high, 8\u201310 min, turning.) Finish with lime juice.\n3. Toss slaw ingredients; rest 5 minutes.\n4. Warm tortillas in a dry skillet 20\u201330 seconds per side.\n5. Build tacos: tofu, slaw, avocado, lime. Serve immediately.\n\n## Nutrition perspective\nProtein-rich, high-fiber, vegetable-forward; balanced spice and fat from avocado.\n\n## Substitutions\nTempeh cubes work in place of tofu (same seasoning). Skip chipotle for smoked paprika only if heat is too much.\n"
+      "bodyMd": "# Crispy Chipotle Tofu Tacos with Lime Slaw\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-23\n\n## Attributes\ncuisine: Mexican | format: tacos | technique: air-fried | effort: moderate\ncomponents: tofu, cabbage, corn tortillas\nflavors: smoky, spicy, tangy | textures: crispy, crunchy\nnut-free, dairy-free, fish-free\n\n## Time\nPrep: 20 min | Cook: 20 min | Total: ~40 min | Difficulty: Easy–Moderate\n\n## Ingredients\n**Tofu**\n- 14 oz (400 g) extra-firm tofu, pressed 10–15 min, cut into ¾-inch cubes\n- 1 tbsp olive oil or avocado oil\n- 1 tbsp cornstarch\n- 1–1½ tsp chipotle powder (or 1 minced chipotle in adobo + 1 tsp sauce; check label for nuts)\n- 1 tsp smoked paprika\n- ¾ tsp ground cumin\n- ½ tsp garlic powder\n- ½ tsp kosher salt\n- ¼ tsp black pepper\n- Juice of ½ lime\n\n**Slaw**\n- 3 cups shredded green cabbage (or coleslaw mix without nuts)\n- ½ cup shredded carrot\n- ¼ cup chopped cilantro\n- 2 tbsp lime juice\n- 1 tbsp olive oil\n- ½ tsp maple syrup or agave (optional)\n- Salt and pepper to taste\n\n**To serve**\n- 6 small corn tortillas (warmed)\n- 1 ripe avocado, sliced\n- Lime wedges\n- Hot sauce (optional; check nut-free)\n\n## Instructions\n1. Press tofu, cube, and pat dry. Toss with oil, cornstarch, chipotle, paprika, cumin, garlic powder, salt, and pepper until coated.\n2. Air fry at 400°F (200°C) for 14–18 minutes, shaking halfway, until edges are deep golden and crisp. (Pan method: nonstick skillet over medium-high, 8–10 min, turning.) Finish with lime juice.\n3. Toss slaw ingredients; rest 5 minutes.\n4. Warm tortillas in a dry skillet 20–30 seconds per side.\n5. Build tacos: tofu, slaw, avocado, lime. Serve immediately.\n\n## Nutrition perspective\nProtein-rich, high-fiber, vegetable-forward; balanced spice and fat from avocado.\n\n## Substitutions\nTempeh cubes work in place of tofu (same seasoning). Skip chipotle for smoked paprika only if heat is too much.\n"
+    },
+    {
+      "slug": "crispy-falafel-pita-wraps",
+      "version": "v1",
+      "title": "Crispy Falafel Pita Wraps",
+      "bodyMd": "# Crispy Falafel Pita Wraps with Lemon Cashew-Tahini\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-26\n\n## Attributes\ncuisine: Middle Eastern | format: wraps | technique: air-fried | effort: moderate\ncomponents: chickpeas, pita, cucumber, cashew tahini\nflavors: herby, garlicky, tangy, savory | textures: crispy, creamy, crunchy\ndairy-free, fish-free; contains cashews (permitted); no other nuts\n\n## Time\nPrep: 20 min | Cook: 20 min | Total: ~40 min | Difficulty: Moderate\n\n## Ingredients\n**Falafel**\n- 1 can (15 oz / 425 g) chickpeas, drained, rinsed, patted very dry\n- ½ small yellow onion, roughly chopped\n- 2 garlic cloves\n- ½ cup packed fresh parsley (or parsley + cilantro mix)\n- 1 tsp ground cumin\n- ½ tsp ground coriander\n- ½ tsp kosher salt\n- ¼ tsp black pepper\n- ¼ tsp baking powder\n- 2–3 tbsp chickpea flour or all-purpose flour (just enough to hold)\n- 1 tbsp olive oil (for coating before air fry)\n\n**Lemon cashew-tahini sauce**\n- ⅓ cup raw cashews, soaked in hot water 15 min, drained\n- 2 tbsp tahini (sesame — OK; check label nut-free aside from sesame)\n- 2 tbsp lemon juice\n- 1 small garlic clove\n- ¼–⅓ cup cold water (to thin)\n- ¼ tsp salt, pinch cumin\n\n**Wraps & salad**\n- 4 small pita or flatbreads (warmed)\n- 1 cup shredded romaine or cabbage\n- 1 Persian cucumber, diced\n- 1 Roma tomato, diced\n- Pickled red onion or thin red onion slices (optional)\n- Fresh mint or parsley to finish\n- Do **not** add pine nuts, almonds, or dairy yogurt sauce\n\n## Instructions\n1. Soak cashews in hot water while you prep falafel.\n2. Pulse chickpeas, onion, garlic, herbs, cumin, coriander, salt, and pepper in a food processor until coarse and sticky — not a puree. Pulse in baking powder and flour until the mix holds when squeezed. Chill 5–10 minutes if soft.\n3. Form 10–12 small patties (~1½ inch). Brush or toss lightly with olive oil. Air fry at 375°F (190°C) 12–16 minutes, flipping halfway, until deep golden and crisp outside. (Oven: 400°F / 200°C on a parchment-lined sheet, 18–22 min, flip halfway.)\n4. Blend drained cashews, tahini, lemon, garlic, salt, cumin, and water until silky. Thin to drizzle consistency.\n5. Warm pitas. Fill with greens, cucumber, tomato, onion, falafel, and generous cashew-tahini. Mint/parsley on top. Serve immediately.\n\n## Nutrition perspective\nHigh-fiber plant protein; cashew-tahini adds richness without dairy. Enjoyment-forward street-food format.\n\n## Substitutions\nStore-bought plain falafel mix only if dairy-/nut-free (except cashews if you add them separately). Hummus thinned with lemon works if skipping cashews — but this option is meant to probe the cashew exception.\n"
+    },
+    {
+      "slug": "moroccan-lentil-carrot-tagine",
+      "version": "v1",
+      "title": "Moroccan Lentil Carrot Tagine",
+      "bodyMd": "# Moroccan Spiced Lentil & Roasted Carrot Tagine with Couscous\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-26\n\n## Attributes\ncuisine: Moroccan-inspired | format: tagine | technique: simmered + roasted | effort: easy\ncomponents: lentils, carrots, couscous, warm spices\nflavors: warm-spiced, savory, slightly sweet, bright | textures: tender, stew-y, fluffy\nnut-free, dairy-free, fish-free — no almond garnish, no yogurt\n\n## Time\nPrep: 15 min | Cook: 30 min | Total: ~45 min | Difficulty: Easy\n\n## Ingredients\n**Roasted carrots**\n- 3–4 medium carrots, cut on bias into ½-inch pieces\n- 1 tbsp olive oil\n- ½ tsp cumin\n- Pinch cinnamon, salt, pepper\n\n**Tagine stew**\n- 1 tbsp olive oil\n- 1 small yellow onion, diced\n- 3 garlic cloves, minced\n- 1 tsp grated fresh ginger (optional)\n- 1 tsp ground cumin\n- 1 tsp ground coriander\n- ½ tsp smoked or sweet paprika\n- ¼ tsp cinnamon\n- ¼ tsp turmeric\n- Pinch cayenne (optional)\n- 1 tbsp tomato paste\n- ¾ cup dry brown or green lentils, rinsed\n- 1 can (14.5 oz / 411 g) diced tomatoes\n- 2 cups vegetable broth or water\n- ½ cup frozen peas (optional, last 5 min)\n- Juice of ½ lemon\n- Salt and black pepper\n- Handful chopped cilantro or parsley\n\n**Couscous**\n- ¾ cup dry couscous (or quinoa if preferred)\n- ¾ cup boiling water or broth + pinch salt + 1 tsp olive oil\n- Do **not** finish with almonds, pine nuts, or dairy yogurt\n\n## Instructions\n1. Heat oven to 425°F (220°C). Toss carrots with oil and spices; roast 18–22 minutes until caramelized at the edges.\n2. Meanwhile, warm oil in a medium saucepan over medium heat. Soften onion 5–6 minutes. Add garlic and ginger; cook 1 minute. Stir in cumin, coriander, paprika, cinnamon, turmeric, and cayenne 30 seconds. Add tomato paste; cook 1 minute.\n3. Add lentils, diced tomatoes, and broth. Bring to a simmer; cook uncovered 22–28 minutes until lentils are tender and stew thickens. Stir occasionally; add a splash of water if tight. Fold in peas for the last 5 minutes if using.\n4. Pour boiling water/broth over couscous in a bowl; cover 5 minutes; fluff with fork and olive oil.\n5. Stir roasted carrots and lemon juice into the stew. Salt to taste. Serve over couscous with herbs.\n\n## Nutrition perspective\nHigh-fiber plant meal; warm spices deliver comfort without cream or nuts. Easy weeknight stew format.\n\n## Substitutions\nRed lentils cook faster (~12–15 min) but go softer — fine for a thicker stew. Sweet potato cubes can roast with (or instead of) carrots. Quinoa or rice instead of couscous.\n"
     },
     {
       "slug": "sheet-pan-lemon-dill-cod",
       "version": "v1",
       "title": "Sheet Pan Lemon Dill Cod",
-      "bodyMd": "# Sheet-Pan Lemon-Dill Cod with Potatoes & Green Beans\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-24\n\n## Attributes\ncuisine: Mediterranean | format: plated entr\u00e9e | technique: sheet-pan roast | effort: easy\ncomponents: cod, potato, green beans, lemon, dill\nflavors: bright, herby, citrus, savory | textures: flaky, crisp-roast\nnut-free, dairy-free; contains fish \u2014 no butter, no cream sauce\n\n## Time\nPrep: 15 min | Cook: 30 min | Total: ~45 min | Difficulty: Easy\n\n## Ingredients\n**Vegetables**\n- \u00be lb (340 g) baby potatoes, halved (or Yukon gold cut in \u00be-inch chunks)\n- 8 oz (225 g) green beans, trimmed\n- 2 tbsp olive oil, divided\n- \u00bd tsp garlic powder\n- \u00bd tsp smoked or sweet paprika\n- Salt and black pepper\n\n**Fish**\n- 2 cod fillets (5\u20136 oz / 140\u2013170 g each), or other firm white fish (haddock, pollock)\n- 1 tbsp olive oil\n- 1 lemon (\u00bd for juice/zest, \u00bd sliced into rounds)\n- 1 tbsp chopped fresh dill (or 1 tsp dried)\n- 1 small garlic clove, grated or minced\n- Pinch of salt and pepper\n\n**Finish**\n- Extra lemon wedges\n- More fresh dill if you have it\n- Do **not** finish with butter or creamy dill sauce (dairy)\n\n## Instructions\n1. Heat oven to 425\u00b0F (220\u00b0C). Line a large sheet pan with parchment if you like easier cleanup.\n2. Toss potatoes with 1 tbsp olive oil, garlic powder, paprika, salt, and pepper. Spread cut-side down. Roast 15 minutes.\n3. Meanwhile, pat cod dry. Mix 1 tbsp olive oil, lemon zest, 1 tbsp lemon juice, dill, garlic, salt, and pepper. Coat fillets.\n4. Pull the pan out. Push potatoes to one side. Toss green beans with remaining 1 tbsp olive oil, salt, and pepper; add to the pan. Nestle cod in the open space; lay a lemon slice or two on each fillet.\n5. Roast 12\u201315 minutes more until potatoes are tender, green beans blistered, and cod flakes easily (internal ~140\u00b0F / 60\u00b0C). Thick fillets may need 1\u20132 extra minutes; thin fillets less.\n6. Plate with lemon wedges and a little more dill.\n\n**Blackstone option (not required):** Roast potatoes in the oven; sear lemon-dill cod and blister green beans on a medium Blackstone flat-top for more char \u2014 only if you want the extra step.\n\n## Nutrition perspective\nHigh protein, relatively light richness; potatoes and green beans make a complete plate. Bright citrus-herb profile vs heavier glazes.\n\n## Substitutions\nHalibut or tilapia with adjusted cook time. Asparagus or broccolini instead of green beans. Sweet potato chunks instead of baby potatoes (may need a few more minutes before adding fish).\n"
+      "bodyMd": "# Sheet-Pan Lemon-Dill Cod with Potatoes & Green Beans\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-24\n\n## Attributes\ncuisine: Mediterranean | format: plated entrée | technique: sheet-pan roast | effort: easy\ncomponents: cod, potato, green beans, lemon, dill\nflavors: bright, herby, citrus, savory | textures: flaky, crisp-roast\nnut-free, dairy-free; contains fish — no butter, no cream sauce\n\n## Time\nPrep: 15 min | Cook: 30 min | Total: ~45 min | Difficulty: Easy\n\n## Ingredients\n**Vegetables**\n- ¾ lb (340 g) baby potatoes, halved (or Yukon gold cut in ¾-inch chunks)\n- 8 oz (225 g) green beans, trimmed\n- 2 tbsp olive oil, divided\n- ½ tsp garlic powder\n- ½ tsp smoked or sweet paprika\n- Salt and black pepper\n\n**Fish**\n- 2 cod fillets (5–6 oz / 140–170 g each), or other firm white fish (haddock, pollock)\n- 1 tbsp olive oil\n- 1 lemon (½ for juice/zest, ½ sliced into rounds)\n- 1 tbsp chopped fresh dill (or 1 tsp dried)\n- 1 small garlic clove, grated or minced\n- Pinch of salt and pepper\n\n**Finish**\n- Extra lemon wedges\n- More fresh dill if you have it\n- Do **not** finish with butter or creamy dill sauce (dairy)\n\n## Instructions\n1. Heat oven to 425°F (220°C). Line a large sheet pan with parchment if you like easier cleanup.\n2. Toss potatoes with 1 tbsp olive oil, garlic powder, paprika, salt, and pepper. Spread cut-side down. Roast 15 minutes.\n3. Meanwhile, pat cod dry. Mix 1 tbsp olive oil, lemon zest, 1 tbsp lemon juice, dill, garlic, salt, and pepper. Coat fillets.\n4. Pull the pan out. Push potatoes to one side. Toss green beans with remaining 1 tbsp olive oil, salt, and pepper; add to the pan. Nestle cod in the open space; lay a lemon slice or two on each fillet.\n5. Roast 12–15 minutes more until potatoes are tender, green beans blistered, and cod flakes easily (internal ~140°F / 60°C). Thick fillets may need 1–2 extra minutes; thin fillets less.\n6. Plate with lemon wedges and a little more dill.\n\n**Blackstone option (not required):** Roast potatoes in the oven; sear lemon-dill cod and blister green beans on a medium Blackstone flat-top for more char — only if you want the extra step.\n\n## Nutrition perspective\nHigh protein, relatively light richness; potatoes and green beans make a complete plate. Bright citrus-herb profile vs heavier glazes.\n\n## Substitutions\nHalibut or tilapia with adjusted cook time. Asparagus or broccolini instead of green beans. Sweet potato chunks instead of baby potatoes (may need a few more minutes before adding fish).\n"
     },
     {
       "slug": "tomato-basil-white-bean-rigatoni",
       "version": "v1",
       "title": "Tomato Basil White Bean Rigatoni",
-      "bodyMd": "# Tomato-Basil White Bean Rigatoni\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-24\n\n## Attributes\ncuisine: Italian | format: pasta | technique: stovetop simmer | effort: easy\ncomponents: rigatoni, white beans, tomato, basil, garlic\nflavors: savory, herby, bright, garlicky | textures: al dente, saucy\nnut-free, dairy-free, fish-free \u2014 no Parmesan, no cream, no nut pesto\n\n## Time\nPrep: 10 min | Cook: 25 min | Total: ~35 min | Difficulty: Easy\n\n## Ingredients\n- 8 oz (225 g) dry rigatoni (or penne / ziti)\n- 3 tbsp olive oil, divided\n- 4 garlic cloves, thinly sliced\n- \u00bd tsp red pepper flakes (optional)\n- 1 can (14.5 oz / 411 g) crushed or diced tomatoes\n- 1 can (15 oz / 425 g) cannellini or great northern beans, drained and rinsed\n- \u00bd tsp dried oregano\n- Salt and black pepper\n- 1 large handful fresh basil leaves, torn (or 1 tsp dried basil)\n- 1 tsp lemon zest or a squeeze of lemon (optional brightness)\n- Do **not** finish with Parmesan, butter, or pine-nut pesto\n\n## Instructions\n1. Bring a large pot of well-salted water to a boil. Cook pasta until just shy of al dente (about 1 minute under package time). Reserve 1 cup pasta water; drain.\n2. While pasta cooks: warm 2 tbsp olive oil in a wide skillet over medium heat. Add garlic (and pepper flakes if using); cook 1\u20132 minutes until fragrant and just golden \u2014 not brown.\n3. Add tomatoes, oregano, a pinch of salt, and a grind of pepper. Simmer 8\u201310 minutes, stirring occasionally, until slightly thickened.\n4. Stir in beans. Mash ~\u00bc of them against the pan for a creamy body without dairy. Simmer 2\u20133 minutes.\n5. Add drained pasta plus \u00bc\u2013\u00bd cup pasta water. Toss over medium heat 1\u20132 minutes until sauce clings. Add more pasta water if tight.\n6. Off heat: fold in remaining 1 tbsp olive oil, torn basil, and lemon zest/juice if using. Taste for salt. Serve immediately.\n\n## Nutrition perspective\nSolid plant protein and fiber from beans; tomato and basil keep it bright. Comfort pasta without dairy heaviness.\n\n## Substitutions\nChickpeas work if white beans are out (different from yesterday\u2019s curry context). Spinach wilted into the sauce in the last minute is fine. Gluten-free short pasta if needed.\n"
+      "bodyMd": "# Tomato-Basil White Bean Rigatoni\nVersion: 1 | Serves: 2 | Status: proposed 2026-09-24\n\n## Attributes\ncuisine: Italian | format: pasta | technique: stovetop simmer | effort: easy\ncomponents: rigatoni, white beans, tomato, basil, garlic\nflavors: savory, herby, bright, garlicky | textures: al dente, saucy\nnut-free, dairy-free, fish-free — no Parmesan, no cream, no nut pesto\n\n## Time\nPrep: 10 min | Cook: 25 min | Total: ~35 min | Difficulty: Easy\n\n## Ingredients\n- 8 oz (225 g) dry rigatoni (or penne / ziti)\n- 3 tbsp olive oil, divided\n- 4 garlic cloves, thinly sliced\n- ½ tsp red pepper flakes (optional)\n- 1 can (14.5 oz / 411 g) crushed or diced tomatoes\n- 1 can (15 oz / 425 g) cannellini or great northern beans, drained and rinsed\n- ½ tsp dried oregano\n- Salt and black pepper\n- 1 large handful fresh basil leaves, torn (or 1 tsp dried basil)\n- 1 tsp lemon zest or a squeeze of lemon (optional brightness)\n- Do **not** finish with Parmesan, butter, or pine-nut pesto\n\n## Instructions\n1. Bring a large pot of well-salted water to a boil. Cook pasta until just shy of al dente (about 1 minute under package time). Reserve 1 cup pasta water; drain.\n2. While pasta cooks: warm 2 tbsp olive oil in a wide skillet over medium heat. Add garlic (and pepper flakes if using); cook 1–2 minutes until fragrant and just golden — not brown.\n3. Add tomatoes, oregano, a pinch of salt, and a grind of pepper. Simmer 8–10 minutes, stirring occasionally, until slightly thickened.\n4. Stir in beans. Mash ~¼ of them against the pan for a creamy body without dairy. Simmer 2–3 minutes.\n5. Add drained pasta plus ¼–½ cup pasta water. Toss over medium heat 1–2 minutes until sauce clings. Add more pasta water if tight.\n6. Off heat: fold in remaining 1 tbsp olive oil, torn basil, and lemon zest/juice if using. Taste for salt. Serve immediately.\n\n## Nutrition perspective\nSolid plant protein and fiber from beans; tomato and basil keep it bright. Comfort pasta without dairy heaviness.\n\n## Substitutions\nChickpeas work if white beans are out (different from yesterday’s curry context). Spinach wilted into the sauce in the last minute is fine. Gluten-free short pasta if needed.\n"
     }
   ],
   "preferences": {
@@ -470,7 +645,7 @@
       "timestamp": "2026-09-24T14:00:00-05:00",
       "event": "on_demand_model_adopted",
       "actor": "Cora",
-      "details": "Adopted on-demand N\u00d73 bulk plan generation."
+      "details": "Adopted on-demand N×3 bulk plan generation."
     },
     {
       "timestamp": "2026-09-24T14:00:00-05:00",
@@ -492,45 +667,64 @@
     {
       "ts": "2026-09-24T19:13:25Z",
       "type": "system_change",
-      "detail": "Harbor Eats tile live on portfolio home (segmentId eats, /harbor-eats/ \u2192 Notion desk). Commit 6f7f312."
+      "detail": "Harbor Eats tile live on portfolio home (segmentId eats, /harbor-eats/ → Notion desk). Commit 6f7f312."
+    },
+    {
+      "timestamp": "2026-09-26T10:40:00-05:00",
+      "event": "week_batch_started",
+      "actor": "Cora",
+      "details": "HE-WEEK-2026-09-26: reuse Unselected HE-2026-09-23-P01 + HE-2026-09-24-P01 as Meal 1/2; generate Meal 3."
+    },
+    {
+      "timestamp": "2026-09-26T10:41:00-05:00",
+      "event": "plan_generated",
+      "actor": "Cora",
+      "details": "Generated HE-2026-09-26-P01 (A falafel wraps / B gochujang trout / C lentil tagine). batch_id=HE-WEEK-2026-09-26. Diversified vs prior six options."
+    },
+    {
+      "timestamp": "2026-09-26T10:41:30-05:00",
+      "event": "batch_id_applied",
+      "actor": "Cora",
+      "details": "Set batch_id HE-WEEK-2026-09-26 on HE-2026-09-23-P01, HE-2026-09-24-P01, HE-2026-09-26-P01."
     }
   ],
   "latestLesson": {
-    "experience": "Standing daily noon generation was replaced with on-demand bulk plans.",
-    "evidence": "Thomas directive 2026-09-24: cancel noon routine; N plans \u00d7 3 options; Plan/Meal Option IDs; Notion desk as SoR sync target.",
-    "learning": "Harbor Eats should generate only when prompted; desk sync is mandatory same-turn; cashews are an explicit exception to the nut ban.",
-    "change": "Deleted daily routine; dual-write local /home/box/harbor-eats + Notion desk; dietary model updated for cashews."
+    "experience": "Week N×3 on-demand batch can reuse Unselected queue plans instead of regenerating.",
+    "evidence": "2026-09-26 week batch HE-WEEK-2026-09-26 reused HE-2026-09-23-P01 and HE-2026-09-24-P01; only Meal 3 newly designed.",
+    "learning": "Reuse active Unselected options when asked; diversify new plans vs the whole queue; email via DraftExternalMessage; shopping list is follow-on after selection.",
+    "change": "Documented week-batch + reuse + email practices in harbor-eats-on-demand-plans skill."
   },
   "headlineMetrics": [
     {
       "label": "Plans generated",
-      "value": "2"
+      "value": "3"
     },
     {
       "label": "Awaiting selection",
-      "value": "2",
-      "hint": "HE-2026-09-23-P01, HE-2026-09-24-P01"
+      "value": "3",
+      "hint": "HE-2026-09-23-P01, HE-2026-09-24-P01, HE-2026-09-26-P01 (week batch HE-WEEK-2026-09-26)"
     },
     {
       "label": "Rated meals",
       "value": "0",
-      "hint": "Preference discovery \u2014 no post-meal ratings yet"
+      "hint": "Next maturity evidence"
     },
     {
-      "label": "Mode",
-      "value": "On-demand",
-      "hint": "No standing noon routine"
+      "label": "Maturity",
+      "value": "Instrumented",
+      "hint": "MVO: stay minimal"
     }
   ],
-  "currentObjective": "Learn Tom and Renata preferences via on-demand N\u00d73 meal plans, selections, and separate 1\u201310 ratings while keeping dietary hard locks.",
-  "currentStatusBrief": "On-demand model live (2026-09-24). Noon routine deleted. Two Unselected plans in queue (6 meal options). Notion Operating Desk stood up under Elephant Harbor HQ and seeded with historical plans/recipes. Cashews permitted; other nuts prohibited. Awaiting first selections and ratings.",
-  "needsHumanAction": false,
+  "currentObjective": "Learn Tom and Renata preferences via on-demand N×3 meal plans, selections, and separate 1–10 ratings while keeping dietary hard locks.",
+  "currentStatusBrief": "Maturity: Instrumented (Hayes 2026-09-26). Week batch HE-WEEK-2026-09-26 ready: three Unselected plans (9 meal options). Meal 1/2 reused from queue; Meal 3 newly generated. Native github.io desk primary. Rated meals 0 — next evidence is household selection/cook/rating. Email workflow: DraftExternalMessage to Tom+Renata (never silent-send); shopping list after selection.",
+  "needsHumanAction": true,
+  "humanAction": "Select one option from each of the three week-batch plans (or skip), then cook and rate — unlocks External Validation evidence. Email draft ready for Tom+Renata.",
   "notionSecondary": {
     "label": "Notion Operating Desk (secondary)",
     "url": "https://app.notion.com/p/3e582029ae68815594aeda9f52e61044"
   },
   "docs": {
-    "mission": "Adaptive meal-planning OS for Tom and Renata. Priorities: enjoyment \u2192 preference fit \u2192 dietary compliance \u2192 nutrition \u2192 variety \u2192 practicality \u2192 exploration. Enjoyment > nutritional optimization.",
+    "mission": "Adaptive meal-planning OS for Tom and Renata. Priorities: enjoyment → preference fit → dietary compliance → nutrition → variety → practicality → exploration. Enjoyment > nutritional optimization.",
     "ids": {
       "plan": "HE-YYYY-MM-DD-PNN",
       "mealOption": "HE-YYYY-MM-DD-PNN-A|B|C"
@@ -543,7 +737,8 @@
       "Skipped",
       "Archived"
     ],
-    "onDemand": "Natural language \u2192 N plans \u00d7 3 options (A/B/C). No standing noon routine.",
-    "kitchen": "Well-equipped + Blackstone Culinary Pellet Griddle Combo (use when helpful)."
+    "onDemand": "Natural language → N plans × 3 options (A/B/C). Week batches may reuse Unselected queue plans. No standing noon routine.",
+    "kitchen": "Well-equipped + Blackstone Culinary Pellet Griddle Combo (use when helpful).",
+    "email": "DraftExternalMessage to Tom+Renata — never silent-send. Shopping list is follow-on after selection."
   }
 }
