@@ -4,7 +4,7 @@
   "description": "Adaptive meal-planning OS for Tom and Renata \u2014 on-demand plans, preference learning, recipe library.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-09-24T19:11:23Z",
+  "lastUpdated": "2026-09-26T15:27:52Z",
   "headlineMetrics": [
     {
       "label": "Plans generated",
@@ -18,23 +18,25 @@
     {
       "label": "Rated meals",
       "value": "0",
-      "hint": "Preference discovery \u2014 no post-meal ratings yet"
+      "hint": "Next maturity evidence"
     },
     {
-      "label": "Mode",
-      "value": "On-demand",
-      "hint": "No standing noon routine"
+      "label": "Maturity",
+      "value": "Instrumented",
+      "hint": "MVO: stay minimal"
     }
   ],
   "currentObjective": "Learn Tom and Renata preferences via on-demand N\u00d73 meal plans, selections, and separate 1\u201310 ratings while keeping dietary hard locks.",
-  "currentStatusBrief": "Native github.io desk in progress (replacing Notion redirect). On-demand model live. Two Unselected plans in queue.",
+  "currentStatusBrief": "Maturity: Instrumented (Hayes 2026-09-26). On-demand OS live; native github.io desk live. Two Unselected plans still in queue (HE-2026-09-23-P01, HE-2026-09-24-P01). Rated meals 0 \u2014 next evidence is household selection/cook/rating, not more agents or routines.",
   "latestLesson": {
     "experience": "Standing daily noon generation was replaced with on-demand bulk plans.",
     "evidence": "Thomas directive 2026-09-24: cancel noon routine; N plans \u00d7 3 options; Plan/Meal Option IDs; Notion desk as SoR sync target.",
     "learning": "Harbor Eats should generate only when prompted; desk sync is mandatory same-turn; cashews are an explicit exception to the nut ban.",
-    "change": "Deleted daily routine; dual-write local /home/box/harbor-eats + Notion desk; dietary model updated for cashews."
+    "change": "Dedicated harbor-eats github.io desk replacing Notion redirect; Notion remains secondary sync surface."
   },
-  "needsHumanAction": false,
-  "humanAction": null,
-  "dashboardUrl": "https://elephantharbor.github.io/harbor-eats/"
+  "needsHumanAction": true,
+  "humanAction": "Select a meal from the queue (or ask for new plans), then cook and rate \u2014 unlocks External Validation evidence.",
+  "dashboardUrl": "https://elephantharbor.github.io/harbor-eats/",
+  "maturityStage": "Instrumented",
+  "maturityNextMilestone": "Household outcome evidence (selections + ratings + cooked meals)"
 }
