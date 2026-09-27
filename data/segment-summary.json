@@ -1,24 +1,24 @@
 {
   "segmentId": "eats",
   "segmentName": "Harbor Eats",
-  "description": "Adaptive meal-planning OS for Tom and Renata — on-demand plans, preference learning, recipe library.",
+  "description": "Adaptive meal-planning OS for Tom and Renata \u2014 on-demand plans, preference learning, recipe library.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-09-26T15:41:00Z",
+  "lastUpdated": "2026-09-27T13:24:33Z",
   "headlineMetrics": [
     {
       "label": "Plans generated",
       "value": "3"
     },
     {
-      "label": "Awaiting selection",
+      "label": "Selected this week",
       "value": "3",
-      "hint": "HE-2026-09-23-P01, HE-2026-09-24-P01, HE-2026-09-26-P01 (week batch HE-WEEK-2026-09-26)"
+      "hint": "1A tofu tacos \u00b7 2B white bean rigatoni \u00b7 3C lentil tagine (HE-WEEK-2026-09-26)"
     },
     {
-      "label": "Rated meals",
-      "value": "0",
-      "hint": "Next maturity evidence"
+      "label": "Awaiting cook/rate",
+      "value": "3",
+      "hint": "No cook events or ratings recorded yet"
     },
     {
       "label": "Maturity",
@@ -26,17 +26,17 @@
       "hint": "MVO: stay minimal"
     }
   ],
-  "currentObjective": "Learn Tom and Renata preferences via on-demand N×3 meal plans, selections, and separate 1–10 ratings while keeping dietary hard locks.",
-  "currentStatusBrief": "Maturity: Instrumented (Hayes 2026-09-26). Week batch HE-WEEK-2026-09-26 ready: three Unselected plans (9 meal options). Meal 1/2 reused from queue; Meal 3 newly generated. Native github.io desk primary. Rated meals 0 — next evidence is household selection/cook/rating. Email workflow: DraftExternalMessage to Tom+Renata (never silent-send); shopping list after selection.",
+  "currentObjective": "Learn Tom and Renata preferences via on-demand N\u00d73 meal plans, selections, and separate 1\u201310 ratings while keeping dietary hard locks.",
+  "currentStatusBrief": "Maturity: Instrumented. Week batch HE-WEEK-2026-09-26 selected 2026-09-27T08:24:33-05:00: 1A Crispy Chipotle Tofu Tacos, 2B Tomato-Basil White Bean Rigatoni, 3C Moroccan Spiced Lentil & Roasted Carrot Tagine. Shopping list ready. Next evidence: cook + separate Tom/Renata ratings. Native github.io desk primary.",
   "latestLesson": {
-    "experience": "Week N×3 on-demand batch can reuse Unselected queue plans instead of regenerating.",
-    "evidence": "2026-09-26 week batch HE-WEEK-2026-09-26 reused HE-2026-09-23-P01 and HE-2026-09-24-P01; only Meal 3 newly designed.",
-    "learning": "Reuse active Unselected options when asked; diversify new plans vs the whole queue; email via DraftExternalMessage; shopping list is follow-on after selection.",
-    "change": "Documented week-batch + reuse + email practices in harbor-eats-on-demand-plans skill."
+    "experience": "Week-batch short reply codes (1A/2B/3C) map cleanly to Meal Option IDs when email order matches plan queue.",
+    "evidence": "2026-09-27T08:24:33-05:00 Tom/Renata selected HE-WEEK-2026-09-26 via 1A, 2B, 3C; plan JSON verified as source of truth for dish names.",
+    "learning": "Verify short codes against plan files before writing Selected; build consolidated shopping list only after selection; do not invent cook/rating events.",
+    "change": "Recorded three Selected transitions + shopping-lists/HE-WEEK-2026-09-26.md; desk counters flipped from awaiting-selection to awaiting-cook."
   },
   "needsHumanAction": true,
-  "humanAction": "Select one option from each of the three week-batch plans (or skip), then cook and rate — unlocks External Validation evidence. Email draft ready for Tom+Renata.",
+  "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u201310).",
   "dashboardUrl": "https://elephantharbor.github.io/harbor-eats/",
   "maturityStage": "Instrumented",
-  "maturityNextMilestone": "Household outcome evidence (selections + ratings + cooked meals)"
+  "maturityNextMilestone": "Household outcome evidence (cooked meals + post-meal ratings)"
 }
