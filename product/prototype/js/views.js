@@ -1,5 +1,6 @@
 import { ONBOARDING_STEPS, getActivePlan } from "./store.js";
 import { constraintLabels } from "./eligibility.js";
+import { inviteUrl } from "./attribution.js";
 
 function esc(s) {
   return String(s ?? "")
@@ -38,7 +39,7 @@ function progress(step) {
 }
 
 function footerNote() {
-  return `<footer class="app-footer">Harbor Eats consumer preview · Not the Operating Desk</footer>`;
+  return `<footer class="app-footer">Harbor Eats product prototype · Not the Operating Desk</footer>`;
 }
 
 export function renderWelcome() {
@@ -48,9 +49,14 @@ export function renderWelcome() {
       <div class="hero-art" role="img" aria-label="Harbor brand gradient"></div>
       <h2 class="display">Dinner, decided together</h2>
       <p class="lead">Three tailored options, cook mode, and ratings that sharpen your household taste model — in a few taps, not a survey.</p>
+      <div class="card" style="margin-bottom:16px;border-color:var(--signal-brass)">
+        <p class="section-label">PLG · Demo card (S3)</p>
+        <h2 class="card-title">SYN walkthrough</h2>
+        <p class="card-meta">Household <code>SYN-DEMO-001</code> · dual 1–10 ratings · loop in ~2 min</p>
+        <button type="button" class="btn btn-accent" style="width:100%;margin-top:12px" data-action="load-syn">Start SYN demo</button>
+      </div>
       <div class="btn-row">
         <button type="button" class="btn btn-primary" data-action="start-onboard">Get started</button>
-        <button type="button" class="btn btn-secondary" data-action="load-syn">Try SYN demo walkthrough</button>
       </div>
       <p class="card-meta" style="margin-top:16px">SYN-* households are labeled synthetic demo data, never real HH001 evidence.</p>
     </main>
@@ -188,17 +194,19 @@ export function renderTasteForm(state) {
 }
 
 export function renderInvite(state) {
+  const token = state.attribution?.inviteToken || "HE-INV-pending";
+  const link = inviteUrl(token);
   return `
     ${header(state, { title: "Invite" })}
     <main class="app-main">
       ${progress(state.onboardingStep)}
-      <p class="section-label">Step 5 of 5</p>
-      <h2 class="display">Invite others (soon)</h2>
-      <p class="lead">Share a link so everyone can rate on their phone. For this preview, invites are a stub — your household is ready on this device.</p>
+      <p class="section-label">PLG · Invite (S1)</p>
+      <h2 class="display">Invite others</h2>
+      <p class="lead">Share a link so everyone can rate on their phone. Bloom tracks <code>HE-INV</code> through <code>loop_completed</code>.</p>
       <div class="card">
         <p class="card-meta">Invite link</p>
-        <p class="card-title" style="font-size:14px;font-family:var(--font-sans)">harbor.eats/invite/stub-preview</p>
-        <button type="button" class="btn btn-secondary" style="margin-top:12px;width:100%" data-action="copy-invite">Copy stub link</button>
+        <p class="card-title" style="font-size:13px;font-family:ui-monospace,monospace;word-break:break-all">${esc(link)}</p>
+        <button type="button" class="btn btn-secondary" style="margin-top:12px;width:100%" data-action="copy-invite">Copy invite link</button>
       </div>
       <div class="btn-row">
         <button type="button" class="btn btn-primary" data-action="finish-onboard">See my first meals</button>
@@ -274,6 +282,11 @@ export function renderPlanOptions(state, planId) {
       <h2 class="display">Three ways to eat well tonight</h2>
       <p class="lead">Each option passed your household eligibility gate.</p>
       <div class="plan-stack">${cards}</div>
+      <div class="card" style="margin-top:16px">
+        <p class="section-label">PLG · Shareable choice-set (S2)</p>
+        <p class="card-meta">Send all three options — attribution via <code>HE-SHARE</code></p>
+        <button type="button" class="btn btn-secondary" style="width:100%" data-action="share-choice-set" data-plan-id="${esc(plan.id)}">Copy share link</button>
+      </div>
     </main>
     ${footerNote()}
   `;

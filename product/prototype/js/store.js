@@ -1,8 +1,9 @@
 import { normalizeConstraints } from "./eligibility.js";
 import { generatePlanOptions, newPlanId } from "./planner.js";
-import { track } from "./analytics.js";
+import { track, trackBloom, attributionPayload } from "./analytics.js";
+import { mintInviteToken, mintShareToken, parseAttributionFromLocation } from "./attribution.js";
 
-const STORAGE_KEY = "he-consumer-state-v1";
+const STORAGE_KEY = "he-product-prototype-v1";
 
 export const ONBOARDING_STEPS = [
   "welcome",
@@ -26,7 +27,31 @@ const DEFAULT_STATE = {
     signals: [],
     lastUpdated: null,
   },
+  attribution: {
+    inboundHeInv: null,
+    inboundHeShare: null,
+    inviteToken: null,
+    lastShareToken: null,
+  },
 };
+
+export function applyInboundAttribution(search) {
+  const state = loadState();
+  const inbound = parseAttributionFromLocation(search);
+  let changed = false;
+  if (inbound.heInv && inbound.heInv !== state.attribution.inboundHeInv) {
+    state.attribution.inboundHeInv = inbound.heInv;
+    trackBloom("HE-INV", { action: "inbound_open", token: inbound.heInv });
+    changed = true;
+  }
+  if (inbound.heShare && inbound.heShare !== state.attribution.inboundHeShare) {
+    state.attribution.inboundHeShare = inbound.heShare;
+    trackBloom("HE-SHARE", { action: "inbound_open", token: inbound.heShare });
+    changed = true;
+  }
+  if (changed) saveState(state);
+  return state;
+}
 
 export function loadState() {
   try {
@@ -103,8 +128,9 @@ export function seedSyntheticHousehold() {
 
 export function initHousehold(name) {
   const state = loadState();
+  const householdId = createHouseholdId(name, false);
   state.household = {
-    id: createHouseholdId(name, false),
+    id: householdId,
     name: name.trim() || "Our household",
     synthetic: false,
     members: [],
@@ -112,6 +138,7 @@ export function initHousehold(name) {
     taste: { likes: [], avoids: [], spice: "medium", protein: "any", time: "any" },
     createdAt: new Date().toISOString(),
   };
+  state.attribution.inviteToken = mintInviteToken(householdId);
   state.onboardingStep = "members";
   saveState(state);
   return state;
@@ -255,7 +282,41 @@ export function submitRatings(planId, ratings, feedback = "") {
 
   saveState(state);
   track("rated", { planId, ratings });
+  trackBloom("loop_completed", {
+    planId,
+    ratings,
+    mealId: opt?.mealId,
+    attribution: attributionPayload(state.attribution),
+  });
   return state;
+}
+
+export function recordInviteShare(action = "link_copied") {
+  const state = loadState();
+  if (!state.attribution.inviteToken && state.household?.id) {
+    state.attribution.inviteToken = mintInviteToken(state.household.id);
+  }
+  saveState(state);
+  trackBloom("HE-INV", {
+    action,
+    token: state.attribution.inviteToken,
+    attribution: attributionPayload(state.attribution),
+  });
+  return state;
+}
+
+export function recordChoiceSetShare(planId) {
+  const state = loadState();
+  const token = mintShareToken(planId);
+  state.attribution.lastShareToken = token;
+  saveState(state);
+  trackBloom("HE-SHARE", {
+    action: "choice_set_shared",
+    token,
+    planId,
+    attribution: attributionPayload(state.attribution),
+  });
+  return { state, token };
 }
 
 export function setScreenStep(step) {

@@ -16,7 +16,11 @@ import {
   markCooked,
   submitRatings,
   setScreenStep,
+  applyInboundAttribution,
+  recordInviteShare,
+  recordChoiceSetShare,
 } from "./store.js";
+import { inviteUrl, shareChoiceSetUrl } from "./attribution.js";
 
 const app = document.getElementById("app");
 
@@ -134,9 +138,23 @@ function onAction(e) {
       paint();
       break;
     }
-    case "copy-invite":
-      showToast("Invite stub copied (preview)");
+    case "copy-invite": {
+      state = recordInviteShare("link_copied");
+      const token = state.attribution?.inviteToken;
+      const link = inviteUrl(token);
+      navigator.clipboard?.writeText(link).catch(() => {});
+      showToast("HE-INV link copied");
       break;
+    }
+    case "share-choice-set": {
+      const planId = el.dataset.planId;
+      const { state: st, token } = recordChoiceSetShare(planId);
+      state = st;
+      const link = shareChoiceSetUrl(token);
+      navigator.clipboard?.writeText(link).catch(() => {});
+      showToast("HE-SHARE link copied");
+      break;
+    }
     case "skip-invite":
     case "finish-onboard":
       state = completeOnboarding();
@@ -237,6 +255,7 @@ window.addEventListener("hashchange", () => {
   paint();
 });
 
+state = applyInboundAttribution(location.search);
 track("app_boot", { path: location.pathname });
 if (state.onboarded) {
   route = parseRoute();

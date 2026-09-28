@@ -33,6 +33,10 @@ Do not invent metrics in the UI — render only what the snapshot contains.
 - Segment-specific `static/segment.css` and `static/app.js`
 - GitHub Pages from `main` at `/`
 
+## Consumer product (separate from this desk)
+
+Canonical paths live under [`product/`](product/) (prototype vertical slice + Workers/D1 skeleton). See [`product/README.md`](product/README.md) and [`docs/product/`](docs/product/). Interim public prototype: https://elephantharbor.github.io/harbor-eats-app/
+
 ## Notion
 
 The operating desk lives on github.io / console. A Notion Operating Desk link may appear on the **Docs** tab as an optional secondary sync target — there is no redirect to Notion.
