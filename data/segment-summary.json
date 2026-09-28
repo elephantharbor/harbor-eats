@@ -1,42 +1,110 @@
 {
   "segmentId": "eats",
   "segmentName": "Harbor Eats",
-  "description": "Adaptive meal-planning OS for Tom and Renata \u2014 on-demand plans, preference learning, recipe library.",
+  "description": "Public-product incubation: household taste intelligence \u2014 learn selections + post-meal enjoyment; small strong choices; better every meal. HH001 Tom/Renata dual-mode pilot continues.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-09-27T13:24:33Z",
+  "lastUpdated": "2026-09-28T12:47:38Z",
+  "mode": "dual",
+  "modes": [
+    "household_001_on_demand_pilot",
+    "public_product_incubation"
+  ],
+  "thesisOneLiner": "Household taste intelligence that learns selections and post-meal enjoyment, offers a small number of strong choices, and gets better every meal.",
   "headlineMetrics": [
     {
       "label": "Plans generated",
       "value": "3"
     },
     {
-      "label": "Selected this week",
+      "label": "Selected (awaiting cook)",
       "value": "3",
       "hint": "1A tofu tacos \u00b7 2B white bean rigatoni \u00b7 3C lentil tagine (HE-WEEK-2026-09-26)"
     },
     {
-      "label": "Awaiting cook/rate",
-      "value": "3",
-      "hint": "No cook events or ratings recorded yet"
+      "label": "Cooked / Rated / Loops",
+      "value": "0 / 0 / 0",
+      "hint": "Honest baseline \u2014 do not invent"
     },
     {
       "label": "Maturity",
       "value": "Instrumented",
-      "hint": "MVO: stay minimal"
+      "hint": "Next: cook+rate evidence AND vertical-slice progress"
     }
   ],
-  "currentObjective": "Learn Tom and Renata preferences via on-demand N\u00d73 meal plans, selections, and separate 1\u201310 ratings while keeping dietary hard locks.",
-  "currentStatusBrief": "Maturity: Instrumented. Week batch HE-WEEK-2026-09-26 selected 2026-09-27T08:24:33-05:00: 1A Crispy Chipotle Tofu Tacos, 2B Tomato-Basil White Bean Rigatoni, 3C Moroccan Spiced Lentil & Roasted Carrot Tagine. Shopping list ready. Next evidence: cook + separate Tom/Renata ratings. Native github.io desk primary.",
+  "roster": [
+    {
+      "name": "Cora",
+      "role": "Lead / GM",
+      "id": "47b766c1-f5aa-42b8-a4ff-9fd7d3d89507"
+    },
+    {
+      "name": "Sage",
+      "role": "Taste Intelligence",
+      "id": "862d3864-c7ad-4c59-a5b0-09d18fc57166"
+    },
+    {
+      "name": "Mira",
+      "role": "Product & Experience",
+      "id": "c2619679-bc4a-4415-8c82-d674dd2c5280"
+    },
+    {
+      "name": "Bloom",
+      "role": "Growth & Distribution",
+      "id": "f7305d65-aeb3-4aac-8680-44af6fb5e133"
+    }
+  ],
+  "currentObjective": "Dual mode: keep HH001 on-demand dinners; incubate household taste-intelligence product (vertical slice \u2192 HH001 in-product loop \u2192 alpha 10\u201325).",
+  "currentStatusBrief": "Product incubation charter live 2026-09-28T07:47:38-05:00. Thesis: household taste intelligence. Roster: Cora/Sage/Mira/Bloom. Taste Model v1 (Sage) + eligibility JSON. Rating lock 1\u20135; disagree when |\u0394|\u22652 or min\u22642&max\u22654. Stack target: Cloudflare Pages+Workers+D1 (static JSON MVO now). HH001 still Selected\u00d73, cooked/rated/loops=0. Native desk primary.",
+  "nextMilestones": [
+    "Vertical slice: choose \u2192 cook \u2192 rate in mobile-first PWA",
+    "HH001 completes \u22651 Experienced Meal Loop (cook + both 1\u20135 ratings)",
+    "Taste Model ranking wired to real experienced evidence",
+    "Alpha criteria + human gate for 10\u201325 households"
+  ],
+  "experiments": [
+    {
+      "id": "EXP-EATS-001",
+      "name": "Disagree-penalty ranking",
+      "status": "designed",
+      "owner": "Sage",
+      "hypothesis": "Penalizing |\u0394|\u22652 or min\u22642&max\u22654 improves joint satisfaction vs max-one-diner ranking"
+    },
+    {
+      "id": "EXP-EATS-002",
+      "name": "In-product vs email rating capture",
+      "status": "planned",
+      "owner": "Mira",
+      "hypothesis": "PWA rate flow raises time-to-rate and loop completion vs email follow-up"
+    },
+    {
+      "id": "EXP-EATS-003",
+      "name": "ICP wedge message",
+      "status": "planned",
+      "owner": "Bloom",
+      "hypothesis": "Couples-with-constraint-conflict positioning outperforms generic meal-plan messaging (no cold outreach until gate)"
+    }
+  ],
   "latestLesson": {
     "experience": "Week-batch short reply codes (1A/2B/3C) map cleanly to Meal Option IDs when email order matches plan queue.",
     "evidence": "2026-09-27T08:24:33-05:00 Tom/Renata selected HE-WEEK-2026-09-26 via 1A, 2B, 3C; plan JSON verified as source of truth for dish names.",
-    "learning": "Verify short codes against plan files before writing Selected; build consolidated shopping list only after selection; do not invent cook/rating events.",
-    "change": "Recorded three Selected transitions + shopping-lists/HE-WEEK-2026-09-26.md; desk counters flipped from awaiting-selection to awaiting-cook."
+    "learning": "Verify short codes against plan files before writing Selected; build consolidated shopping list only after selection; do not invent cook/rating events. Product incubation must keep the same honesty rule.",
+    "change": "2026-09-28: Charter/thesis/architecture/metrics/roadmap + HH-001 seed; Sage taste-model adopted; desk refreshed for incubation status."
   },
   "needsHumanAction": true,
-  "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u201310).",
+  "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u20135: 1 hard miss \u2026 5 want again).",
   "dashboardUrl": "https://elephantharbor.github.io/harbor-eats/",
   "maturityStage": "Instrumented",
-  "maturityNextMilestone": "Household outcome evidence (cooked meals + post-meal ratings)"
+  "maturityNextMilestone": "Household outcome evidence (cooked + ratings) AND product vertical-slice progress",
+  "productDocs": {
+    "charter": "docs/product/CHARTER.md",
+    "thesis": "docs/product/THESIS.md",
+    "tasteModel": "docs/product/taste-model-v1.md",
+    "architecture": "docs/product/ARCHITECTURE.md",
+    "metrics": "docs/product/METRICS.md",
+    "household001": "docs/product/HOUSEHOLD-001.md",
+    "roadmap": "docs/product/ROADMAP.md"
+  },
+  "northStar": "Completed Meal Loops / Active Household / Week",
+  "northStarValue": 0
 }

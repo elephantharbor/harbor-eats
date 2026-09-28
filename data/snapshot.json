@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-27T13:24:33Z",
+  "generatedAt": "2026-09-28T12:47:53Z",
   "segmentId": "eats",
   "segmentName": "Harbor Eats",
-  "operatingMode": "on_demand",
+  "operatingMode": "dual_on_demand_and_product_incubation",
   "diners": [
     "Tom",
     "Renata"
@@ -27,7 +27,9 @@
     "ratings_received": 0,
     "active_unselected_plans": 0,
     "archived_plans": 0,
-    "skipped_plans": 0
+    "skipped_plans": 0,
+    "completed_meal_loops": 0,
+    "completed_meal_loops_note": "present\u2192select\u2192cook\u2192both rate; start 0; never invent history"
   },
   "activePlanIds": [
     "HE-2026-09-23-P01",
@@ -738,13 +740,25 @@
       "event": "shopping_list_built",
       "actor": "Cora",
       "details": "Consolidated shopping list for three selected meals \u2192 shopping-lists/HE-WEEK-2026-09-26.md"
+    },
+    {
+      "timestamp": "2026-09-28T07:47:53-05:00",
+      "event": "product_incubation_charter",
+      "actor": "Cora",
+      "details": "Thomas directed public-product incubation 2026-09-28. Wrote product docs; adopted Sage taste-model-v1 + eligibility JSON; seeded HH-001.json; dual-mode operating model; rating 1\u20135 lock; Cloudflare stack target; cooked/rated/loops remain 0."
+    },
+    {
+      "timestamp": "2026-09-28T07:47:53-05:00",
+      "event": "product_incubation_charter",
+      "actor": "Cora",
+      "details": "Thomas directed public-product incubation 2026-09-28. Wrote product docs; adopted Sage taste-model-v1 + eligibility JSON; seeded HH-001.json; dual-mode operating model; rating 1\u20135 lock; Cloudflare stack target; cooked/rated/loops remain 0."
     }
   ],
   "latestLesson": {
     "experience": "Week-batch short reply codes (1A/2B/3C) map cleanly to Meal Option IDs when email order matches plan queue.",
     "evidence": "2026-09-27T08:24:33-05:00 Tom/Renata selected HE-WEEK-2026-09-26 via 1A, 2B, 3C; plan JSON verified as source of truth for dish names.",
-    "learning": "Verify short codes against plan files before writing Selected; build consolidated shopping list only after selection; do not invent cook/rating events.",
-    "change": "Recorded three Selected transitions + shopping-lists/HE-WEEK-2026-09-26.md; desk counters flipped from awaiting-selection to awaiting-cook."
+    "learning": "Verify short codes against plan files before writing Selected; build consolidated shopping list only after selection; do not invent cook/rating events. Product incubation must keep the same honesty rule.",
+    "change": "2026-09-28: Charter/thesis/architecture/metrics/roadmap + HH-001 seed; Sage taste-model adopted; desk refreshed for incubation status."
   },
   "headlineMetrics": [
     {
@@ -752,35 +766,36 @@
       "value": "3"
     },
     {
-      "label": "Selected this week",
+      "label": "Selected (awaiting cook)",
       "value": "3",
       "hint": "1A tofu tacos \u00b7 2B white bean rigatoni \u00b7 3C lentil tagine (HE-WEEK-2026-09-26)"
     },
     {
-      "label": "Awaiting cook/rate",
-      "value": "3",
-      "hint": "No cook events or ratings recorded yet"
+      "label": "Cooked / Rated / Loops",
+      "value": "0 / 0 / 0",
+      "hint": "Honest baseline \u2014 do not invent"
     },
     {
       "label": "Maturity",
       "value": "Instrumented",
-      "hint": "MVO: stay minimal"
+      "hint": "Next: cook+rate AND vertical-slice progress"
     }
   ],
-  "currentObjective": "Learn Tom and Renata preferences via on-demand N\u00d73 meal plans, selections, and separate 1\u201310 ratings while keeping dietary hard locks.",
-  "currentStatusBrief": "Maturity: Instrumented. Week batch HE-WEEK-2026-09-26 selected 2026-09-27T08:24:33-05:00: 1A Crispy Chipotle Tofu Tacos, 2B Tomato-Basil White Bean Rigatoni, 3C Moroccan Spiced Lentil & Roasted Carrot Tagine. Shopping list ready. Next evidence: cook + separate Tom/Renata ratings. Native github.io desk primary.",
+  "currentObjective": "Dual mode: keep HH001 on-demand dinners; incubate household taste-intelligence product (vertical slice \u2192 HH001 in-product loop \u2192 alpha 10\u201325).",
+  "currentStatusBrief": "Product incubation charter live 2026-09-28T07:47:53-05:00. Thesis: household taste intelligence. Roster: Cora/Sage/Mira/Bloom. Taste Model v1 (Sage) + eligibility JSON. Rating lock 1\u20135; disagree when |\u0394|\u22652 or min\u22642&max\u22654. Stack target: Cloudflare Pages+Workers+D1 (static JSON MVO now). HH001 still Selected\u00d73, cooked/rated/loops=0. Native desk primary.",
   "needsHumanAction": true,
-  "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u201310).",
+  "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u20135: 1 hard miss \u2026 5 want again).",
   "shoppingListPath": "shopping-lists/HE-WEEK-2026-09-26.md",
   "notionSecondary": {
     "label": "Notion Operating Desk (secondary)",
     "url": "https://app.notion.com/p/3e582029ae68815594aeda9f52e61044"
   },
   "docs": {
-    "mission": "Adaptive meal-planning OS for Tom and Renata. Priorities: enjoyment \u2192 preference fit \u2192 dietary compliance \u2192 nutrition \u2192 variety \u2192 practicality \u2192 exploration. Enjoyment > nutritional optimization.",
+    "mission": "Household taste intelligence for couples/small households. Enjoyment first; eligibility absolute. Dual mode: HH001 pilot + public-product incubation.",
     "ids": {
       "plan": "HE-YYYY-MM-DD-PNN",
-      "mealOption": "HE-YYYY-MM-DD-PNN-A|B|C"
+      "mealOption": "HE-YYYY-MM-DD-PNN-A|B|C",
+      "household": "HH-001"
     },
     "lifecycle": [
       "Unselected",
@@ -792,6 +807,77 @@
     ],
     "onDemand": "Natural language \u2192 N plans \u00d7 3 options (A/B/C). Week batches may reuse Unselected queue plans. No standing noon routine.",
     "kitchen": "Well-equipped + Blackstone Culinary Pellet Griddle Combo (use when helpful).",
-    "email": "DraftExternalMessage to Tom+Renata \u2014 never silent-send. Shopping list is follow-on after selection."
-  }
+    "email": "DraftExternalMessage to Tom+Renata \u2014 never silent-send. Shopping list is follow-on after selection.",
+    "ratings": "1\u20135 experienced per diner (1 hard miss \u2026 5 want again). Disagree penalty |\u0394|\u22652 or min\u22642&max\u22654.",
+    "product": "docs/product/* \u2014 charter, thesis, Sage taste-model-v1, architecture (Cloudflare), metrics, HH001, roadmap."
+  },
+  "productIncubation": {
+    "directedAt": "2026-09-28",
+    "thesisOneLiner": "Household taste intelligence that learns selections and post-meal enjoyment, offers a small number of strong choices, and gets better every meal.",
+    "northStar": "Completed Meal Loops / Active Household / Week",
+    "northStarValue": 0,
+    "stackTarget": "cloudflare_pages_workers_d1",
+    "ratingScale": "1-5",
+    "disagreePenalty": "|\u0394|\u22652 or (min\u22642 AND max\u22654)",
+    "tasteModel": "docs/product/taste-model-v1.md",
+    "eligibility": "constraints/household-001-eligibility.json",
+    "householdId": "HH-001",
+    "docs": [
+      "docs/product/CHARTER.md",
+      "docs/product/THESIS.md",
+      "docs/product/taste-model-v1.md",
+      "docs/product/ARCHITECTURE.md",
+      "docs/product/METRICS.md",
+      "docs/product/HOUSEHOLD-001.md",
+      "docs/product/ROADMAP.md"
+    ]
+  },
+  "roster": [
+    {
+      "name": "Cora",
+      "role": "Lead / GM",
+      "id": "47b766c1-f5aa-42b8-a4ff-9fd7d3d89507"
+    },
+    {
+      "name": "Sage",
+      "role": "Taste Intelligence",
+      "id": "862d3864-c7ad-4c59-a5b0-09d18fc57166"
+    },
+    {
+      "name": "Mira",
+      "role": "Product & Experience",
+      "id": "c2619679-bc4a-4415-8c82-d674dd2c5280"
+    },
+    {
+      "name": "Bloom",
+      "role": "Growth & Distribution",
+      "id": "f7305d65-aeb3-4aac-8680-44af6fb5e133"
+    }
+  ],
+  "nextMilestones": [
+    "Vertical slice: choose \u2192 cook \u2192 rate in mobile-first PWA",
+    "HH001 completes \u22651 Experienced Meal Loop",
+    "Taste Model ranking on real experienced evidence",
+    "Alpha criteria + human gate for 10\u201325 households"
+  ],
+  "experiments": [
+    {
+      "id": "EXP-EATS-001",
+      "name": "Disagree-penalty ranking",
+      "status": "designed",
+      "owner": "Sage"
+    },
+    {
+      "id": "EXP-EATS-002",
+      "name": "In-product vs email rating capture",
+      "status": "planned",
+      "owner": "Mira"
+    },
+    {
+      "id": "EXP-EATS-003",
+      "name": "ICP wedge message",
+      "status": "planned",
+      "owner": "Bloom"
+    }
+  ]
 }
