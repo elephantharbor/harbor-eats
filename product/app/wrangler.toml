@@ -1,0 +1,12 @@
+name = "harbor-eats-api"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+
+# Uncomment after: wrangler d1 create harbor-eats-dev
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "harbor-eats-dev"
+# database_id = "<fill-from-create-output>"
+
+[vars]
+ENVIRONMENT = "development"
