@@ -117,6 +117,21 @@
       const priorAcc = priorWp.oversightAccepted ? "accepted" : "—";
       const priorCommit = priorWp.integrationCommitAtAcceptance || "";
       priorRow = `<div class="k">Prior cycle</div><div class="v">${esc(prior.label || "Cycle " + prior.id)} · ${esc(priorIds)} · Oversight ${esc(priorAcc)}${priorCommit ? ` @ <span class="mono">${esc(priorCommit)}</span>` : ""}</div>`;
+    } else if (prior.id) {
+      const parts = [esc(prior.label || "Cycle " + prior.id)];
+      const decAcc = prior.decisionsAccepted || [];
+      if (decAcc.length) {
+        parts.push(
+          `${esc(decAcc.join(", "))} Oversight accepted${prior.oversightAcceptedOn ? ` (${esc(prior.oversightAcceptedOn)})` : ""}`
+        );
+      }
+      if (prior.integrationCommit) {
+        parts.push(`integration <span class="mono">${esc(prior.integrationCommit)}</span>`);
+      }
+      if (prior.runtimeCommitAtAcceptance) {
+        parts.push(`runtime <span class="mono">${esc(prior.runtimeCommitAtAcceptance)}</span>`);
+      }
+      priorRow = `<div class="k">Prior cycle</div><div class="v">${parts.join(" · ")}</div>`;
     }
     let catalogRow = "";
     if (catalog.structurallyValidatedCount != null) {
@@ -124,29 +139,60 @@
       catalogRow = `<div class="k">Meal catalog</div><div class="v">${esc(String(catalog.structurallyValidatedCount))} structurally validated · provenance ${esc(catalog.provenance || "—")} · image rights ${esc(img)} · kitchen-tested ${esc(String(catalog.kitchenTestedCount != null ? catalog.kitchenTestedCount : "—"))}</div>`;
     }
     const merged = integ.mergedToProductionMain === false ? "not merged to production main" : "";
+    const runtimeCommit = integ.productRuntimeCommit || cc.productRuntimeCommit || "";
+    const vs = cc.validationSuite || {};
+    let validationRow = "";
+    if (vs.migrationsOk != null || vs.unitTestsPassed != null) {
+      const bits = [];
+      if (vs.migrationsOk != null) bits.push(`migrations ${vs.migrationsOk ? "OK" : "—"}`);
+      if (vs.unitTestsPassed != null) {
+        bits.push(
+          `unit ${vs.unitTestsPassed}${vs.unitTestFiles != null ? ` / ${vs.unitTestFiles} files` : ""}`
+        );
+      }
+      if (vs.lint) bits.push(`lint ${esc(vs.lint)}`);
+      if (vs.playwrightPassed != null) bits.push(`Playwright ${vs.playwrightPassed} passed`);
+      validationRow = `<div class="k">Validation (runtime tree)</div><div class="v">${bits.join(" · ")}${vs.note ? ` — ${esc(vs.note)}` : ""}</div>`;
+    }
+    const prevDeploy = prev.deploymentId ? ` · deploy ${esc(prev.deploymentId)}` : "";
+    const prevD1 = prev.d1InstanceId ? ` · D1 ${esc(prev.d1InstanceId)}` : "";
+    const prevMig =
+      prev.migrationsThrough ? ` · migrations ${esc(prev.migrationsApplied || "0001")}–${esc(prev.migrationsThrough)}` : "";
+    const prodD1 =
+      prod.d1MigrationsThrough && !prod.d1Migrated
+        ? ` (migrations 0001–${esc(prod.d1MigrationsThrough)} only)`
+        : "";
+    const polish = cc.carryForwardPolish || [];
     const hhProd =
       hh.productionWrites === false ? " · no production writes" : "";
     const hhSynth =
       hh.syntheticQaIsRealUsage === false ? " · synthetic QA ≠ real usage" : "";
+    const hhPreview =
+      hh.syntheticPreviewCycleDataIsRealUsage === false
+        ? " · preview Cycle 3 flows ≠ real usage"
+        : "";
     return `<div class="card" style="margin-top:10px">
       <h2>${esc(cc.label || "Campaign cycle")}</h2>
-      <p class="dim" style="margin:0 0 8px;font-size:11px">Product state · as of ${esc(ps.asOfCt || "—")} CT · ${esc(ps.productName || "")} (${esc(ps.consumerRepo || "")})</p>
+      <p class="dim" style="margin:0 0 8px;font-size:11px">Product state · as of ${esc(ps.asOfCt || "—")} CT · ${ps.ventureName ? `${esc(ps.ventureName)} venture · ` : ""}${esc(ps.productName || "")} (${esc(ps.consumerRepo || "")})</p>
       <div class="meta-grid">
         <div class="k">Recruitment</div><div class="v">${esc(cc.recruitment || "—")}</div>
         <div class="k">Integration branch</div><div class="v mono">${esc(integ.branch || "—")}</div>
         <div class="k">Integration commit</div><div class="v mono">${esc(integ.commit || "—")}${merged ? ` (${esc(merged)})` : ""}</div>
+        ${runtimeCommit ? `<div class="k">Product runtime (suite-tested)</div><div class="v mono">${esc(runtimeCommit)}</div>` : ""}
         ${priorRow}
         ${workRow}
-        <div class="k">Production main</div><div class="v mono">${esc(prod.mainCommit || "—")}</div>
+        <div class="k">Production main</div><div class="v mono">${esc(prod.mainCommit || "—")}${prod.frozen ? " (frozen)" : ""}</div>
         <div class="k">Production Pages</div><div class="v mono">${esc(prod.pagesBundle || "—")}</div>
-        <div class="k">Production D1</div><div class="v">${prod.d1Migrated ? "migrated" : "not migrated"}</div>
-        <div class="k">Isolated preview</div><div class="v">${prev.url ? `<a href="${esc(prev.url)}" target="_blank" rel="noopener noreferrer">${esc(prev.url)}</a>` : "—"} · ${esc(prev.pagesBundle || "—")} · ${esc(prev.d1 || "")}${prev.isProduction === false ? " (not production)" : ""}</div>
+        <div class="k">Production D1</div><div class="v">${prod.d1Migrated ? "migrated" : `not migrated${prodD1}`}</div>
+        <div class="k">Isolated preview</div><div class="v">${prev.url ? `<a href="${esc(prev.url)}" target="_blank" rel="noopener noreferrer">${esc(prev.url)}</a>` : "—"} · ${esc(prev.pagesBundle || "—")} · ${esc(prev.d1 || "preview D1")}${prevMig}${prevDeploy}${prevD1}${prev.isProduction === false ? " (not production)" : ""}</div>
+        ${validationRow}
         ${catalogRow}
-        <div class="k">HH-001 loops</div><div class="v">${esc(String(hh.completedMealLoops != null ? hh.completedMealLoops : "—"))}${esc(hhProd)}${esc(hhSynth)}</div>
+        <div class="k">HH-001 loops</div><div class="v">${esc(String(hh.completedMealLoops != null ? hh.completedMealLoops : "—"))}${esc(hhProd)}${esc(hhSynth)}${esc(hhPreview)}</div>
       </div>
       ${decisions ? `<p class="dim" style="font-size:11px;margin:12px 0 4px">Decisions</p><ul class="list-plain">${decisions}</ul>` : ""}
       ${catalog.note ? `<p class="dim" style="margin:8px 0 0;font-size:11px">${esc(catalog.note)}</p>` : ""}
-      ${leg.migration ? `<p class="dim" style="margin:12px 0 0;font-size:11px">Legacy evidence (${esc(leg.migration)}): ${esc(leg.note || "")}</p>` : ""}
+      ${polish.length ? `<p class="dim" style="margin:8px 0 0;font-size:11px">Carry-forward polish (known, not blockers): ${esc(polish.join("; "))}</p>` : ""}
+      ${leg.migration ? `<p class="dim" style="margin:12px 0 0;font-size:11px">Migration ${esc(leg.migration)}: ${esc(leg.note || "")}</p>` : ""}
     </div>`;
   }
 
