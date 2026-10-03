@@ -4,7 +4,7 @@
   "description": "Public-product incubation: household taste intelligence \u2014 learn selections + post-meal enjoyment; small strong choices; better every meal. HH001 Tom/Renata dual-mode pilot continues.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-09-28T12:47:38Z",
+  "lastUpdated": "2026-10-03T23:00:00Z",
   "mode": "dual",
   "modes": [
     "household_001_on_demand_pilot",
@@ -28,8 +28,8 @@
     },
     {
       "label": "Maturity",
-      "value": "Instrumented",
-      "hint": "Next: cook+rate evidence AND vertical-slice progress"
+      "value": "Campaign Cycle 1",
+      "hint": "FW-01\u2013FW-10 implemented; Oversight acceptance pending \u00b7 production still fw-sw-v3"
     }
   ],
   "roster": [
@@ -54,13 +54,13 @@
       "id": "f7305d65-aeb3-4aac-8680-44af6fb5e133"
     }
   ],
-  "currentObjective": "Dual mode: keep HH001 on-demand dinners; incubate household taste-intelligence product (vertical slice \u2192 HH001 in-product loop \u2192 alpha 10\u201325).",
-  "currentStatusBrief": "Product incubation charter live 2026-09-28T07:47:38-05:00. Thesis: household taste intelligence. Roster: Cora/Sage/Mira/Bloom. Taste Model v1 (Sage) + eligibility JSON. Rating lock 1\u20135; disagree when |\u0394|\u22652 or min\u22642&max\u22654. Stack target: Cloudflare Pages+Workers+D1 (static JSON MVO now). HH001 still Selected\u00d73, cooked/rated/loops=0. Native desk primary.",
+  "currentObjective": "Campaign Cycle 1: complete FlavorWeave alpha-remediation acceptance (FW-01\u2013FW-10), keep HH-001 honest (0 loops), and hold recruitment closed until Oversight + household evidence gates clear.",
+  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 1. FlavorWeave integration branch feature/flavorweave-alpha-remediation @ 35b19159643c017ed407bcda4ac5c2f72b2f09ba: FW-01\u2013FW-10 implementation complete, Oversight acceptance pending. D-01\u2013D-06 approved, not implemented. Production main 97952206ef03363be726f22e0df6152251c0b931; Pages fw-sw-v3; production D1 not migrated. Preview harbor-eats-cycle1-preview.pages.dev (fw-sw-v7) only. HH-001 loops 0; recruitment closed.",
   "nextMilestones": [
-    "Vertical slice: choose \u2192 cook \u2192 rate in mobile-first PWA",
-    "HH001 completes \u22651 Experienced Meal Loop (cook + both 1\u20135 ratings)",
-    "Taste Model ranking wired to real experienced evidence",
-    "Alpha criteria + human gate for 10\u201325 households"
+    "Oversight acceptance: FW-01\u2013FW-10 on feature/flavorweave-alpha-remediation",
+    "Implement approved decisions D-01\u2013D-06 (after acceptance gate)",
+    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0)",
+    "Production harbor-eats-app promotion only after explicit migration + acceptance gates"
   ],
   "experiments": [
     {
