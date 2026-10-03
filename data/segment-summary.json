@@ -4,7 +4,7 @@
   "description": "Public-product incubation: household taste intelligence \u2014 learn selections + post-meal enjoyment; small strong choices; better every meal. HH001 Tom/Renata dual-mode pilot continues.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-10-03T23:00:00Z",
+  "lastUpdated": "2026-10-03T23:30:00Z",
   "mode": "dual",
   "modes": [
     "household_001_on_demand_pilot",
@@ -28,8 +28,8 @@
     },
     {
       "label": "Maturity",
-      "value": "Campaign Cycle 1",
-      "hint": "FW-01\u2013FW-10 implemented; Oversight acceptance pending \u00b7 production still fw-sw-v3"
+      "value": "Campaign Cycle 2",
+      "hint": "D-02/D-03 implemented; Oversight pending \u00b7 Cycle 1 FW accepted @ 35b1915 \u00b7 production main unchanged"
     }
   ],
   "roster": [
@@ -54,12 +54,12 @@
       "id": "f7305d65-aeb3-4aac-8680-44af6fb5e133"
     }
   ],
-  "currentObjective": "Campaign Cycle 1: complete FlavorWeave alpha-remediation acceptance (FW-01\u2013FW-10), keep HH-001 honest (0 loops), and hold recruitment closed until Oversight + household evidence gates clear.",
-  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 1. FlavorWeave integration branch feature/flavorweave-alpha-remediation @ 35b19159643c017ed407bcda4ac5c2f72b2f09ba: FW-01\u2013FW-10 implementation complete, Oversight acceptance pending. D-01\u2013D-06 approved, not implemented. Production main 97952206ef03363be726f22e0df6152251c0b931; Pages fw-sw-v3; production D1 not migrated. Preview harbor-eats-cycle1-preview.pages.dev (fw-sw-v7) only. HH-001 loops 0; recruitment closed.",
+  "currentObjective": "Campaign Cycle 2: secure Oversight acceptance for D-02 (Taste Vocabulary and Preference Experience) and D-03 (Meal Catalog) on feature/flavorweave-alpha-remediation @ aa6596a, keep HH-001 honest (0 loops, no production writes), and hold catalog claims to structural validation only until provenance and image rights clear.",
+  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 2. Cycle 1 FW-01\u2013FW-10 accepted @ 35b1915. Integration tip aa6596a: D-02/D-03 implementation complete, Oversight pending (not accepted). D-01, D-04, D-05, D-06 not started. 24 catalog meals structurally validated only; kitchen-tested 0. Production main 97952206 unchanged; preview https://harbor-eats-cycle1-preview.pages.dev not production. HH-001 loops 0; no production writes.",
   "nextMilestones": [
-    "Oversight acceptance: FW-01\u2013FW-10 on feature/flavorweave-alpha-remediation",
-    "Implement approved decisions D-01\u2013D-06 (after acceptance gate)",
-    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0)",
+    "Oversight acceptance: D-02 and D-03 on feature/flavorweave-alpha-remediation @ aa6596a",
+    "Start D-01, D-04, D-05, D-06 when scheduled (not started)",
+    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0; no production writes)",
     "Production harbor-eats-app promotion only after explicit migration + acceptance gates"
   ],
   "experiments": [

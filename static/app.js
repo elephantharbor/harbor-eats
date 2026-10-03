@@ -71,42 +71,81 @@
     return `<div class="table-wrap"><table class="data"><thead><tr><th>Rule</th><th>Policy</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
+  function decisionImplLabel(d) {
+    if (d.implementation === "complete") return "implementation complete";
+    if (d.implementation === "not_started") return "not started";
+    if (d.implemented) return "implemented";
+    return "not implemented";
+  }
+
   function renderCampaignCycleCard(ps) {
     const cc = ps && ps.campaignCycle;
     if (!cc) return "";
     const integ = cc.integration || {};
     const wp = cc.workPackages || {};
+    const prior = cc.priorCycle || {};
+    const priorWp = prior.workPackages || {};
     const prod = cc.production || {};
     const prev = cc.isolatedPreview || {};
     const hh = cc.household001 || {};
     const leg = cc.legacyEvidence || {};
+    const catalog = cc.mealCatalog || {};
     const decisions = (cc.decisions || [])
       .map((d) => {
         const title = d.title ? ` — ${d.title}` : "";
-        const impl = d.implemented ? "implemented" : "not implemented";
-        return `<li><code>${esc(d.id)}</code>${esc(title)} · ${esc(d.status || "—")}, ${esc(impl)}</li>`;
+        const impl = decisionImplLabel(d);
+        let oversight = "";
+        if (d.implementation === "complete") {
+          oversight = d.oversightAccepted
+            ? " · Oversight accepted"
+            : " · Oversight " + (d.oversightAcceptance || "pending");
+        }
+        return `<li><code>${esc(d.id)}</code>${esc(title)} · ${esc(d.status || "—")}, ${esc(impl)}${esc(oversight)}</li>`;
       })
       .join("");
     const wpIds = (wp.ids || []).join(", ");
-    const oversight = wp.oversightAccepted
-      ? "accepted"
-      : wp.oversightAcceptance || (wp.implementation === "complete" ? "pending" : "—");
+    let workRow = "";
+    if (wpIds) {
+      const oversight = wp.oversightAccepted
+        ? "accepted"
+        : wp.oversightAcceptance || (wp.implementation === "complete" ? "pending" : "—");
+      workRow = `<div class="k">Work packages</div><div class="v">${esc(wpIds)} · ${esc(wp.implementation || "—")} · Oversight ${esc(oversight)}</div>`;
+    }
+    let priorRow = "";
+    if (priorWp.ids && priorWp.ids.length) {
+      const priorIds = priorWp.ids.join(", ");
+      const priorAcc = priorWp.oversightAccepted ? "accepted" : "—";
+      const priorCommit = priorWp.integrationCommitAtAcceptance || "";
+      priorRow = `<div class="k">Prior cycle</div><div class="v">${esc(prior.label || "Cycle " + prior.id)} · ${esc(priorIds)} · Oversight ${esc(priorAcc)}${priorCommit ? ` @ <span class="mono">${esc(priorCommit)}</span>` : ""}</div>`;
+    }
+    let catalogRow = "";
+    if (catalog.structurallyValidatedCount != null) {
+      const img = catalog.imageRightsClearedForExternalRelease ? "cleared" : "not cleared";
+      catalogRow = `<div class="k">Meal catalog</div><div class="v">${esc(String(catalog.structurallyValidatedCount))} structurally validated · provenance ${esc(catalog.provenance || "—")} · image rights ${esc(img)} · kitchen-tested ${esc(String(catalog.kitchenTestedCount != null ? catalog.kitchenTestedCount : "—"))}</div>`;
+    }
+    const merged = integ.mergedToProductionMain === false ? "not merged to production main" : "";
+    const hhProd =
+      hh.productionWrites === false ? " · no production writes" : "";
+    const hhSynth =
+      hh.syntheticQaIsRealUsage === false ? " · synthetic QA ≠ real usage" : "";
     return `<div class="card" style="margin-top:10px">
       <h2>${esc(cc.label || "Campaign cycle")}</h2>
       <p class="dim" style="margin:0 0 8px;font-size:11px">Product state · as of ${esc(ps.asOfCt || "—")} CT · ${esc(ps.productName || "")} (${esc(ps.consumerRepo || "")})</p>
       <div class="meta-grid">
         <div class="k">Recruitment</div><div class="v">${esc(cc.recruitment || "—")}</div>
         <div class="k">Integration branch</div><div class="v mono">${esc(integ.branch || "—")}</div>
-        <div class="k">Integration commit</div><div class="v mono">${esc(integ.commit || "—")}</div>
-        <div class="k">Work packages</div><div class="v">${esc(wpIds)} · ${esc(wp.implementation || "—")}</div>
-        <div class="k">Oversight</div><div class="v">${esc(oversight)}</div>
+        <div class="k">Integration commit</div><div class="v mono">${esc(integ.commit || "—")}${merged ? ` (${esc(merged)})` : ""}</div>
+        ${priorRow}
+        ${workRow}
         <div class="k">Production main</div><div class="v mono">${esc(prod.mainCommit || "—")}</div>
         <div class="k">Production Pages</div><div class="v mono">${esc(prod.pagesBundle || "—")}</div>
         <div class="k">Production D1</div><div class="v">${prod.d1Migrated ? "migrated" : "not migrated"}</div>
         <div class="k">Isolated preview</div><div class="v">${prev.url ? `<a href="${esc(prev.url)}" target="_blank" rel="noopener noreferrer">${esc(prev.url)}</a>` : "—"} · ${esc(prev.pagesBundle || "—")} · ${esc(prev.d1 || "")}${prev.isProduction === false ? " (not production)" : ""}</div>
-        <div class="k">HH-001 loops</div><div class="v">${esc(String(hh.completedMealLoops != null ? hh.completedMealLoops : "—"))}</div>
+        ${catalogRow}
+        <div class="k">HH-001 loops</div><div class="v">${esc(String(hh.completedMealLoops != null ? hh.completedMealLoops : "—"))}${esc(hhProd)}${esc(hhSynth)}</div>
       </div>
       ${decisions ? `<p class="dim" style="font-size:11px;margin:12px 0 4px">Decisions</p><ul class="list-plain">${decisions}</ul>` : ""}
+      ${catalog.note ? `<p class="dim" style="margin:8px 0 0;font-size:11px">${esc(catalog.note)}</p>` : ""}
       ${leg.migration ? `<p class="dim" style="margin:12px 0 0;font-size:11px">Legacy evidence (${esc(leg.migration)}): ${esc(leg.note || "")}</p>` : ""}
     </div>`;
   }

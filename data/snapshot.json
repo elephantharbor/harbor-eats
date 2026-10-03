@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T23:00:00Z",
+  "generatedAt": "2026-10-03T23:30:00Z",
   "segmentId": "eats",
   "segmentName": "Harbor Eats",
   "operatingMode": "dual_on_demand_and_product_incubation",
@@ -758,6 +758,12 @@
       "event": "campaign_cycle_1_milestone",
       "actor": "Cora",
       "details": "Campaign Cycle 1 desk snapshot (2026-10-03 CT). FlavorWeave integration branch feature/flavorweave-alpha-remediation @ 35b19159643c017ed407bcda4ac5c2f72b2f09ba: FW-01\u2013FW-10 implementation complete, Oversight acceptance not yet granted. D-01\u2013D-06 approved, not implemented (D-05 AI/LLM Interaction and Cost Architecture; D-06 Natural-Language Meal Planning). Production harbor-eats-app main 97952206ef03363be726f22e0df6152251c0b931, Pages fw-sw-v3, production D1 not migrated. Isolated preview https://harbor-eats-cycle1-preview.pages.dev (fw-sw-v7, preview D1, migrations through 0009) \u2014 not production. HH-001 completed meal loops 0; recruitment closed. Migration 0009 legacy unproven rows excluded from household evidence; not on production D1."
+    },
+    {
+      "timestamp": "2026-10-03T18:30:00-05:00",
+      "event": "campaign_cycle_2_milestone",
+      "actor": "Cora",
+      "details": "Campaign Cycle 2 desk snapshot (2026-10-03 CT). Cycle 1 FW-01\u2013FW-10 accepted by Oversight at integration 35b19159643c017ed407bcda4ac5c2f72b2f09ba. Integration branch feature/flavorweave-alpha-remediation tip aa6596a4baa83d1f8d6756da1ac005f2ab2f341f (not merged to production main 97952206ef03363be726f22e0df6152251c0b931). D-02 Taste Vocabulary and Preference Experience and D-03 Meal Catalog: implementation complete, Oversight acceptance pending (not accepted). D-01, D-04, D-05, D-06 not started. 24 catalog meals structurally validated only; provenance unknown; image rights not cleared for external release; kitchen-tested count 0. HH-001 completed meal loops 0; no production HH-001 writes; synthetic QA is not real usage. Isolated preview https://harbor-eats-cycle1-preview.pages.dev \u2014 not production."
     }
   ],
   "latestLesson": {
@@ -783,12 +789,12 @@
     },
     {
       "label": "Maturity",
-      "value": "Campaign Cycle 1",
-      "hint": "FW-01\u2013FW-10 implemented; Oversight acceptance pending \u00b7 production still fw-sw-v3"
+      "value": "Campaign Cycle 2",
+      "hint": "D-02/D-03 implemented; Oversight pending \u00b7 Cycle 1 FW accepted @ 35b1915 \u00b7 production main unchanged"
     }
   ],
-  "currentObjective": "Campaign Cycle 1: complete FlavorWeave alpha-remediation acceptance (FW-01\u2013FW-10), keep HH-001 honest (0 loops), and hold recruitment closed until Oversight + household evidence gates clear.",
-  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 1. FlavorWeave consumer app (harbor-eats-app) integration branch feature/flavorweave-alpha-remediation @ 35b19159643c017ed407bcda4ac5c2f72b2f09ba: FW-01 through FW-10 implementation complete, awaiting Oversight acceptance (not accepted). Decisions D-01\u2013D-06 approved, not implemented (D-05 AI/LLM Interaction and Cost Architecture; D-06 Natural-Language Meal Planning). Production main 97952206ef03363be726f22e0df6152251c0b931; production Pages fw-sw-v3; production D1 not migrated. Isolated preview only: harbor-eats-cycle1-preview.pages.dev (fw-sw-v7, preview D1, migrations through 0009). HH-001 Selected\u00d73; completed meal loops 0. Recruitment closed. Migration 0009 legacy unproven rows do not count as household evidence; not applied to production.",
+  "currentObjective": "Campaign Cycle 2: secure Oversight acceptance for D-02 (Taste Vocabulary and Preference Experience) and D-03 (Meal Catalog) on feature/flavorweave-alpha-remediation @ aa6596a, keep HH-001 honest (0 loops, no production writes), and hold catalog claims to structural validation only until provenance and image rights clear.",
+  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 2. Cycle 1 FW-01\u2013FW-10 accepted by Oversight at integration 35b19159643c017ed407bcda4ac5c2f72b2f09ba. harbor-eats-app integration branch tip aa6596a4baa83d1f8d6756da1ac005f2ab2f341f: D-02 and D-03 implementation complete, Oversight acceptance pending (not accepted). D-01, D-04, D-05, D-06 not started. 24 catalog meals structurally validated only (provenance unknown; image rights not cleared; kitchen-tested count 0). Production main 97952206ef03363be726f22e0df6152251c0b931; not merged. Preview https://harbor-eats-cycle1-preview.pages.dev only \u2014 not production. HH-001 Selected\u00d73; completed meal loops 0; no production HH-001 writes; synthetic QA is not real usage.",
   "needsHumanAction": true,
   "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u20135: 1 hard miss \u2026 5 want again).",
   "shoppingListPath": "shopping-lists/HE-WEEK-2026-09-26.md",
@@ -863,9 +869,9 @@
     }
   ],
   "nextMilestones": [
-    "Oversight acceptance: FW-01\u2013FW-10 on feature/flavorweave-alpha-remediation",
-    "Implement approved decisions D-01\u2013D-06 (after acceptance gate)",
-    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0)",
+    "Oversight acceptance: D-02 and D-03 on feature/flavorweave-alpha-remediation @ aa6596a",
+    "Start D-01, D-04, D-05, D-06 when scheduled (not started)",
+    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0; no production writes)",
     "Production harbor-eats-app promotion only after explicit migration + acceptance gates"
   ],
   "productState": {
@@ -874,64 +880,81 @@
     "deskRepo": "elephantharbor/harbor-eats",
     "asOfCt": "2026-10-03",
     "campaignCycle": {
-      "id": 1,
-      "label": "Campaign Cycle 1",
+      "id": 2,
+      "label": "Campaign Cycle 2",
       "recruitment": "closed",
       "integration": {
         "branch": "feature/flavorweave-alpha-remediation",
-        "commit": "35b19159643c017ed407bcda4ac5c2f72b2f09ba"
+        "commit": "aa6596a4baa83d1f8d6756da1ac005f2ab2f341f",
+        "mergedToProductionMain": false
       },
-      "workPackages": {
-        "ids": [
-          "FW-01",
-          "FW-02",
-          "FW-03",
-          "FW-04",
-          "FW-05",
-          "FW-06",
-          "FW-07",
-          "FW-08",
-          "FW-09",
-          "FW-10"
-        ],
-        "implementation": "complete",
-        "oversightAcceptance": "pending",
-        "oversightAccepted": false
+      "priorCycle": {
+        "id": 1,
+        "label": "Campaign Cycle 1",
+        "workPackages": {
+          "ids": [
+            "FW-01",
+            "FW-02",
+            "FW-03",
+            "FW-04",
+            "FW-05",
+            "FW-06",
+            "FW-07",
+            "FW-08",
+            "FW-09",
+            "FW-10"
+          ],
+          "oversightAccepted": true,
+          "integrationCommitAtAcceptance": "35b19159643c017ed407bcda4ac5c2f72b2f09ba"
+        }
       },
       "decisions": [
         {
           "id": "D-01",
           "status": "approved",
-          "implemented": false
+          "implementation": "not_started"
         },
         {
           "id": "D-02",
+          "title": "Taste Vocabulary and Preference Experience",
           "status": "approved",
-          "implemented": false
+          "implementation": "complete",
+          "oversightAcceptance": "pending",
+          "oversightAccepted": false
         },
         {
           "id": "D-03",
+          "title": "Meal Catalog",
           "status": "approved",
-          "implemented": false
+          "implementation": "complete",
+          "oversightAcceptance": "pending",
+          "oversightAccepted": false
         },
         {
           "id": "D-04",
           "status": "approved",
-          "implemented": false
+          "implementation": "not_started"
         },
         {
           "id": "D-05",
           "title": "AI/LLM Interaction and Cost Architecture",
           "status": "approved",
-          "implemented": false
+          "implementation": "not_started"
         },
         {
           "id": "D-06",
           "title": "Natural-Language Meal Planning",
           "status": "approved",
-          "implemented": false
+          "implementation": "not_started"
         }
       ],
+      "mealCatalog": {
+        "structurallyValidatedCount": 24,
+        "provenance": "unknown",
+        "imageRightsClearedForExternalRelease": false,
+        "kitchenTestedCount": 0,
+        "note": "Structurally validated only \u2014 not kitchen-tested"
+      },
       "production": {
         "mainCommit": "97952206ef03363be726f22e0df6152251c0b931",
         "pagesBundle": "fw-sw-v3",
@@ -946,7 +969,9 @@
       },
       "household001": {
         "householdId": "HH-001",
-        "completedMealLoops": 0
+        "completedMealLoops": 0,
+        "productionWrites": false,
+        "syntheticQaIsRealUsage": false
       },
       "legacyEvidence": {
         "migration": "0009",
