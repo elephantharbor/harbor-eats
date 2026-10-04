@@ -154,6 +154,8 @@
       if (vs.lint) bits.push(`lint ${esc(vs.lint)}`);
       if (vs.playwrightPassed != null) bits.push(`Playwright ${vs.playwrightPassed} passed`);
       validationRow = `<div class="k">Validation (runtime tree)</div><div class="v">${bits.join(" · ")}${vs.note ? ` — ${esc(vs.note)}` : ""}</div>`;
+    } else if (vs.implementationVerified) {
+      validationRow = `<div class="k">Validation</div><div class="v">Implementation verified${vs.note ? ` — ${esc(vs.note)}` : ""}</div>`;
     }
     const prevDeploy = prev.deploymentId ? ` · deploy ${esc(prev.deploymentId)}` : "";
     const prevD1 = prev.d1InstanceId ? ` · D1 ${esc(prev.d1InstanceId)}` : "";
