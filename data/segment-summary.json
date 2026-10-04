@@ -4,7 +4,7 @@
   "description": "Public-product incubation: household taste intelligence \u2014 learn selections + post-meal enjoyment; small strong choices; better every meal. HH001 Tom/Renata dual-mode pilot continues.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-10-04T03:03:00Z",
+  "lastUpdated": "2026-10-04T11:36:00Z",
   "mode": "dual",
   "modes": [
     "household_001_on_demand_pilot",
@@ -28,8 +28,8 @@
     },
     {
       "label": "Maturity",
-      "value": "Campaign Cycle 3B",
-      "hint": "D-01 verified @ 991db9e; Oversight pending \u00b7 D-02/D-03 accepted \u00b7 production frozen"
+      "value": "Cycle 3B in production",
+      "hint": "D-01 accepted @ 991db9e \u00b7 fw-sw-v16 \u00b7 D1 through 0011 \u00b7 catalog 24 \u00b7 GitHub main not moved"
     }
   ],
   "roster": [
@@ -54,13 +54,15 @@
       "id": "f7305d65-aeb3-4aac-8680-44af6fb5e133"
     }
   ],
-  "currentObjective": "Campaign Cycle 3B (FlavorWeave): household plan authority + final acceptance check for D-01 \u2014 implementation verified at runtime 991db9e; await Oversight acceptance. Keep HH-001 honest (CML 0; no production writes). Do not start D-04, D-05, or D-06.",
-  "currentStatusBrief": "As of 2026-10-04 CT \u2014 Cycle 3B. D-01 implementation verified (runtime 991db9e; integration tip docs pending). Preview https://harbor-eats-cycle1-preview.pages.dev fw-sw-v16 (not production). Verified: server-discoverable dinner plans (localStorage cache only); multi-context invite join without share URL; toast no-op fixed (line_id false positive); history includes dinner-plan fully_rated meals. D-02/D-03 Oversight accepted. Production frozen 97952206; HH-001 CML 0; recruitment closed. Do not start D-04\u2013D-06.",
+  "currentObjective": "FlavorWeave production is the Oversight-accepted Cycle 3B runtime 991db9e (D-01 through D-03B). Catalog stays 24. Catalog Factory dry run and legacy-24 audit are pending; its D1 runtime migration is planned, not executed. Do not start D-04, D-05, or D-06. HH-001 CML remains 0; do not stamp unproven legacy rows without a reviewed household id.",
+  "currentStatusBrief": "As of 2026-10-04 06:36 CT \u2014 production release. Oversight accepted through D-03B / Cycle 3B (D-01 included). Deployed runtime 991db9e4770df6b460d3f9594ce29a114101c33e, fw-sw-v16. Pages 7bca4afe-e2a4-4178-be79-f30443499995 (harbor-eats-app.pages.dev). Worker be960ae6-d6a4-411f-a3a6-ee6f5e7c9879. Production D1 23aa3db3-1090-471b-8c8a-b6fe71f5c053 through 0011 (0008+0009+0010+0011 together). Pre-existing rows are unproven, not household; constraint rules preserved; no HH-001 stamp. Catalog Factory established (Juniper Curator; Eats Vale is Harbor Eats Catalog Auditor \u2014 Gaming also has a Vale). Catalog still 24. Dry run pending. Legacy-24 audit pending. Catalog Factory D1 runtime migration planned, not executed. No new meals. GitHub app main still 97952206. D-04\u2013D-06 not started. HH-001 CML 0.",
   "nextMilestones": [
-    "Oversight acceptance: D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) \u2014 Cycle 3B implementation verified @ runtime 991db9e",
+    "Catalog Factory dry run \u2014 pending",
+    "Legacy-24 catalog audit \u2014 pending",
+    "Catalog Factory D1 runtime migration \u2014 planned, not executed",
     "Do not start D-04, D-05, or D-06",
-    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; CML still 0; no production writes)",
-    "Production harbor-eats-app promotion only after explicit migration + acceptance gates (production frozen)"
+    "HH-001 CML still 0; do not stamp unproven legacy origin without a reviewed household id",
+    "GitHub harbor-eats-app main still 97952206 (production was deployed from detached runtime 991db9e)"
   ],
   "experiments": [
     {

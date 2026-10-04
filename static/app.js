@@ -165,6 +165,17 @@
       prod.d1MigrationsThrough && !prod.d1Migrated
         ? ` (migrations 0001–${esc(prod.d1MigrationsThrough)} only)`
         : "";
+    const prodD1Value = prod.d1Migrated
+      ? `migrated${prod.d1MigrationsThrough ? ` through ${esc(prod.d1MigrationsThrough)}` : ""}`
+      : `not migrated${prodD1}`;
+    const gitMain =
+      prod.gitMainCommit && prod.gitMainCommit !== prod.mainCommit
+        ? `<div class="k">GitHub main</div><div class="v mono">${esc(prod.gitMainCommit)} (not fast-forwarded)</div>`
+        : "";
+    const cf = cc.catalogFactory || {};
+    const cfNote = cf.established
+      ? `<p class="dim" style="margin:8px 0 0;font-size:11px">Catalog Factory established. Juniper ${esc((cf.roles && cf.roles[0] && cf.roles[0].role) || "Curator")}. Vale is Harbor Eats Catalog Auditor (Gaming also has a Vale). Catalog ${esc(String(cf.catalogCount != null ? cf.catalogCount : "—"))}. Dry run ${esc(cf.dryRun || "—")}. Legacy-24 audit ${esc(cf.legacy24Audit || "—")}. Catalog Factory D1 runtime migration ${esc(String(cf.d1RuntimeMigration || "—").replaceAll("_", " "))}. Candidates shipped ${esc(String(cf.candidatesShipped != null ? cf.candidatesShipped : 0))}.</p>`
+      : "";
     const carryForward = cc.carryForwardKnown || cc.carryForwardPolish || [];
     const phaseFocus = cc.phaseFocus ? `<div class="k">Cycle focus</div><div class="v">${esc(cc.phaseFocus)}</div>` : "";
     const c3b = cc.cycle3BVerified || [];
@@ -187,9 +198,10 @@
         ${phaseFocus}
         ${priorRow}
         ${workRow}
-        <div class="k">Production main</div><div class="v mono">${esc(prod.mainCommit || "—")}${prod.frozen ? " (frozen)" : ""}</div>
-        <div class="k">Production Pages</div><div class="v mono">${esc(prod.pagesBundle || "—")}</div>
-        <div class="k">Production D1</div><div class="v">${prod.d1Migrated ? "migrated" : `not migrated${prodD1}`}</div>
+        <div class="k">Production runtime</div><div class="v mono">${esc(prod.deployedCommit || prod.mainCommit || "—")}${prod.frozen ? " (frozen)" : ""}</div>
+        ${gitMain}
+        <div class="k">Production Pages</div><div class="v mono">${esc(prod.pagesBundle || "—")}${prod.pagesDeploymentId ? ` · ${esc(prod.pagesDeploymentId)}` : ""}</div>
+        <div class="k">Production D1</div><div class="v">${prodD1Value}</div>
         <div class="k">Isolated preview</div><div class="v">${prev.url ? `<a href="${esc(prev.url)}" target="_blank" rel="noopener noreferrer">${esc(prev.url)}</a>` : "—"} · ${esc(prev.pagesBundle || "—")} · ${esc(prev.d1 || "preview D1")}${prevMig}${prevDeploy}${prevD1}${prev.isProduction === false ? " (not production)" : ""}</div>
         ${validationRow}
         ${catalogRow}
@@ -198,6 +210,7 @@
       ${decisions ? `<p class="dim" style="font-size:11px;margin:12px 0 4px">Decisions</p><ul class="list-plain">${decisions}</ul>` : ""}
       ${c3b.length ? `<p class="dim" style="font-size:11px;margin:8px 0 4px">Cycle 3B verified</p><ul class="list-plain">${c3b.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
       ${catalog.note ? `<p class="dim" style="margin:8px 0 0;font-size:11px">${esc(catalog.note)}</p>` : ""}
+      ${cfNote}
       ${carryForward.length ? `<p class="dim" style="margin:8px 0 0;font-size:11px">Carry-forward (known, not blockers): ${esc(carryForward.join("; "))}</p>` : ""}
       ${leg.migration ? `<p class="dim" style="margin:12px 0 0;font-size:11px">Migration ${esc(leg.migration)}: ${esc(leg.note || "")}</p>` : ""}
     </div>`;
