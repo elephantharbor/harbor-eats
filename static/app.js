@@ -139,6 +139,7 @@
       catalogRow = `<div class="k">Meal catalog</div><div class="v">${esc(String(catalog.structurallyValidatedCount))} structurally validated · provenance ${esc(catalog.provenance || "—")} · image rights ${esc(img)} · kitchen-tested ${esc(String(catalog.kitchenTestedCount != null ? catalog.kitchenTestedCount : "—"))}</div>`;
     }
     const merged = integ.mergedToProductionMain === false ? "not merged to production main" : "";
+    const commitNote = integ.commitNote ? ` — ${esc(integ.commitNote)}` : "";
     const runtimeCommit = integ.productRuntimeCommit || cc.productRuntimeCommit || "";
     const vs = cc.validationSuite || {};
     let validationRow = "";
@@ -162,7 +163,9 @@
       prod.d1MigrationsThrough && !prod.d1Migrated
         ? ` (migrations 0001–${esc(prod.d1MigrationsThrough)} only)`
         : "";
-    const polish = cc.carryForwardPolish || [];
+    const carryForward = cc.carryForwardKnown || cc.carryForwardPolish || [];
+    const phaseFocus = cc.phaseFocus ? `<div class="k">Cycle focus</div><div class="v">${esc(cc.phaseFocus)}</div>` : "";
+    const c3b = cc.cycle3BVerified || [];
     const hhProd =
       hh.productionWrites === false ? " · no production writes" : "";
     const hhSynth =
@@ -177,8 +180,9 @@
       <div class="meta-grid">
         <div class="k">Recruitment</div><div class="v">${esc(cc.recruitment || "—")}</div>
         <div class="k">Integration branch</div><div class="v mono">${esc(integ.branch || "—")}</div>
-        <div class="k">Integration commit</div><div class="v mono">${esc(integ.commit || "—")}${merged ? ` (${esc(merged)})` : ""}</div>
-        ${runtimeCommit ? `<div class="k">Product runtime (suite-tested)</div><div class="v mono">${esc(runtimeCommit)}</div>` : ""}
+        <div class="k">Integration commit</div><div class="v mono">${esc(integ.commit || "—")}${merged ? ` (${esc(merged)})` : ""}${commitNote}</div>
+        ${runtimeCommit ? `<div class="k">Product runtime (verified)</div><div class="v mono">${esc(runtimeCommit)}</div>` : ""}
+        ${phaseFocus}
         ${priorRow}
         ${workRow}
         <div class="k">Production main</div><div class="v mono">${esc(prod.mainCommit || "—")}${prod.frozen ? " (frozen)" : ""}</div>
@@ -190,8 +194,9 @@
         <div class="k">HH-001 loops</div><div class="v">${esc(String(hh.completedMealLoops != null ? hh.completedMealLoops : "—"))}${esc(hhProd)}${esc(hhSynth)}${esc(hhPreview)}</div>
       </div>
       ${decisions ? `<p class="dim" style="font-size:11px;margin:12px 0 4px">Decisions</p><ul class="list-plain">${decisions}</ul>` : ""}
+      ${c3b.length ? `<p class="dim" style="font-size:11px;margin:8px 0 4px">Cycle 3B verified</p><ul class="list-plain">${c3b.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
       ${catalog.note ? `<p class="dim" style="margin:8px 0 0;font-size:11px">${esc(catalog.note)}</p>` : ""}
-      ${polish.length ? `<p class="dim" style="margin:8px 0 0;font-size:11px">Carry-forward polish (known, not blockers): ${esc(polish.join("; "))}</p>` : ""}
+      ${carryForward.length ? `<p class="dim" style="margin:8px 0 0;font-size:11px">Carry-forward (known, not blockers): ${esc(carryForward.join("; "))}</p>` : ""}
       ${leg.migration ? `<p class="dim" style="margin:12px 0 0;font-size:11px">Migration ${esc(leg.migration)}: ${esc(leg.note || "")}</p>` : ""}
     </div>`;
   }

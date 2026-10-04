@@ -4,7 +4,7 @@
   "description": "Public-product incubation: household taste intelligence \u2014 learn selections + post-meal enjoyment; small strong choices; better every meal. HH001 Tom/Renata dual-mode pilot continues.",
   "status": "active",
   "owner": "Cora (Harbor Eats - Lead)",
-  "lastUpdated": "2026-10-03T23:55:00Z",
+  "lastUpdated": "2026-10-04T03:03:00Z",
   "mode": "dual",
   "modes": [
     "household_001_on_demand_pilot",
@@ -28,8 +28,8 @@
     },
     {
       "label": "Maturity",
-      "value": "Campaign Cycle 3",
-      "hint": "D-01 implemented; Oversight pending \u00b7 D-02/D-03 accepted \u00b7 production frozen @ 97952206"
+      "value": "Campaign Cycle 3B",
+      "hint": "D-01 verified @ 991db9e; Oversight pending \u00b7 D-02/D-03 accepted \u00b7 production frozen"
     }
   ],
   "roster": [
@@ -54,12 +54,12 @@
       "id": "f7305d65-aeb3-4aac-8680-44af6fb5e133"
     }
   ],
-  "currentObjective": "Campaign Cycle 3: secure Oversight acceptance for D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) on feature/flavorweave-alpha-remediation @ 94a67dd5 (runtime ac9e520a suite-tested), keep HH-001 honest (0 completed meal loops, no production writes), and do not count synthetic preview Cycle 3 flows as traction or CML.",
-  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 3 (Harbor Eats \u00b7 FlavorWeave). D-02/D-03 Oversight accepted 2026-10-03 (aa6596a / 23b78f0a). Tip 94a67dd5: D-01 complete, Oversight pending (not accepted). Runtime ac9e520a; fw-sw-v10; preview migrations 0001\u20130011 (not production). Suite: migrations 11 OK, unit 424/37, lint clean, Playwright 27. Production frozen 97952206, fw-sw-v3, D1 0001\u20130007. HH-001 CML 0; synthetic preview usage \u2260 real evidence. D-04\u2013D-06 not yet implemented.",
+  "currentObjective": "Campaign Cycle 3B (FlavorWeave): household plan authority + final acceptance check for D-01 \u2014 implementation verified at runtime 991db9e; await Oversight acceptance. Keep HH-001 honest (CML 0; no production writes). Do not start D-04, D-05, or D-06.",
+  "currentStatusBrief": "As of 2026-10-04 CT \u2014 Cycle 3B. D-01 implementation verified (runtime 991db9e; integration tip docs pending). Preview https://harbor-eats-cycle1-preview.pages.dev fw-sw-v16 (not production). Verified: server-discoverable dinner plans (localStorage cache only); multi-context invite join without share URL; toast no-op fixed (line_id false positive); history includes dinner-plan fully_rated meals. D-02/D-03 Oversight accepted. Production frozen 97952206; HH-001 CML 0; recruitment closed. Do not start D-04\u2013D-06.",
   "nextMilestones": [
-    "Oversight acceptance: D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) on feature/flavorweave-alpha-remediation @ 94a67dd5 (runtime ac9e520a)",
-    "Implement D-04, D-05, D-06 when scheduled (approved, not yet implemented)",
-    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0; no production writes)",
+    "Oversight acceptance: D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) \u2014 Cycle 3B implementation verified @ runtime 991db9e",
+    "Do not start D-04, D-05, or D-06",
+    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; CML still 0; no production writes)",
     "Production harbor-eats-app promotion only after explicit migration + acceptance gates (production frozen)"
   ],
   "experiments": [

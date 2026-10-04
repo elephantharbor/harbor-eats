@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T23:55:00Z",
+  "generatedAt": "2026-10-04T03:03:00Z",
   "segmentId": "eats",
   "segmentName": "Harbor Eats",
   "operatingMode": "dual_on_demand_and_product_incubation",
@@ -770,6 +770,12 @@
       "event": "campaign_cycle_3_milestone",
       "actor": "Cora",
       "details": "Campaign Cycle 3 desk snapshot (2026-10-03 CT). Harbor Eats venture \u00b7 FlavorWeave consumer brand. Cycle 2 D-02 and D-03 Oversight accepted 2026-10-03 (integration aa6596a4baa83d1f8d6756da1ac005f2ab2f341f, runtime 23b78f0a4d98fae463744f9e0c317c3287473ebb). D-01 Plan\u2192Shop\u2192Cook\u2192Rate: implementation complete on feature/flavorweave-alpha-remediation tip 94a67dd5ccd5162a948324cf85e85bc270c394b2; Oversight acceptance pending (not accepted). Product runtime ac9e520a442fd460f7e2880ef55ac8ca93d9a4aa; fw-sw-v10; migration 0011 in tree, applied on preview D1 only. Preview https://harbor-eats-cycle1-preview.pages.dev deployment 198cefc0-5510-44af-95bf-2bca85a8816b, D1 65bc636d-7048-4e58-900b-9066edf6509f, migrations 0001\u20130011. Suite on runtime tree: migrations 11 OK, unit 424/37 files, lint clean, Playwright 27 passed (one test-only e2e fix; tested ac9e520a; tip 94a67dd5 includes docs). Production frozen main 97952206, fw-sw-v3, D1 0001\u20130007 only; HH-001 CML 0; no production deploy/migrate. Synthetic Cycle 3 preview plans/shops/cooks/ratings are not real usage. D-04, D-05, D-06 approved, not yet implemented."
+    },
+    {
+      "timestamp": "2026-10-04T03:03:00-05:00",
+      "event": "campaign_cycle_3b_milestone",
+      "actor": "Cora",
+      "details": "Campaign Cycle 3B desk snapshot (2026-10-04 CT). FlavorWeave household plan authority + final D-01 acceptance check: implementation verified at runtime 991db9e4770df6b460d3f9594ce29a114101c33e (integration tip docs pending). Preview https://harbor-eats-cycle1-preview.pages.dev fw-sw-v16 \u2014 not production. Verified: server-discoverable dinner plans (localStorage cache only); multi-context invite join without share URL; toast no-op fixed (line_id false positive); history includes dinner-plan fully_rated meals. D-01 Oversight acceptance still pending. Production frozen 97952206; HH-001 CML 0; recruitment closed. Do not start D-04, D-05, or D-06."
     }
   ],
   "latestLesson": {
@@ -795,12 +801,12 @@
     },
     {
       "label": "Maturity",
-      "value": "Campaign Cycle 3",
-      "hint": "D-01 implemented; Oversight pending \u00b7 D-02/D-03 accepted \u00b7 production frozen @ 97952206"
+      "value": "Campaign Cycle 3B",
+      "hint": "D-01 verified @ 991db9e; Oversight pending \u00b7 D-02/D-03 accepted \u00b7 production frozen"
     }
   ],
-  "currentObjective": "Campaign Cycle 3: secure Oversight acceptance for D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) on feature/flavorweave-alpha-remediation @ 94a67dd5 (product runtime ac9e520a suite-tested), keep HH-001 honest (0 completed meal loops, no production writes), and do not count synthetic preview Cycle 3 flows as traction or CML.",
-  "currentStatusBrief": "As of 2026-10-03 CT \u2014 Campaign Cycle 3 (Harbor Eats venture, FlavorWeave consumer). Cycle 2 D-02 and D-03 Oversight accepted 2026-10-03 (integration aa6596a4, runtime 23b78f0a). Integration tip 94a67dd5ccd5162a948324cf85e85bc270c394b2: D-01 implementation complete, Oversight acceptance pending (not accepted). Product runtime ac9e520a442fd460f7e2880ef55ac8ca93d9a4aa; fw-sw-v10; migration 0011 in tree, applied on preview D1 only. Preview https://harbor-eats-cycle1-preview.pages.dev (deploy 198cefc0, D1 65bc636d, migrations 0001\u20130011) \u2014 preview validation only, not production. Suite on runtime tree: migrations 11 OK, unit 424 passed / 37 files, lint clean, Playwright 27 passed. Production frozen main 97952206ef03363be726f22e0df6152251c0b931, Pages fw-sw-v3, D1 0001\u20130007; no production deploy/migrate. 24 catalog meals structurally validated only (kitchen-tested 0). HH-001 completed meal loops 0; synthetic preview Cycle 3 usage is not real household evidence. D-04, D-05, D-06 approved, not yet implemented.",
+  "currentObjective": "Campaign Cycle 3B (FlavorWeave): household plan authority + final acceptance check for D-01 \u2014 implementation verified at runtime 991db9e; await Oversight acceptance. Keep HH-001 honest (CML 0; no production writes). Do not start D-04, D-05, or D-06.",
+  "currentStatusBrief": "As of 2026-10-04 CT \u2014 Cycle 3B. D-01 implementation verified (runtime 991db9e; integration tip docs pending). Preview https://harbor-eats-cycle1-preview.pages.dev fw-sw-v16 (not production). Verified: server-discoverable dinner plans (localStorage cache only); multi-context invite join without share URL; toast no-op fixed (line_id false positive); history includes dinner-plan fully_rated meals. D-02/D-03 Oversight accepted. Production frozen 97952206; HH-001 CML 0; recruitment closed. Do not start D-04\u2013D-06.",
   "needsHumanAction": true,
   "humanAction": "Shop from the week list, cook the three selected meals, then rate each separately (Tom + Renata, 1\u20135: 1 hard miss \u2026 5 want again).",
   "shoppingListPath": "shopping-lists/HE-WEEK-2026-09-26.md",
@@ -875,9 +881,9 @@
     }
   ],
   "nextMilestones": [
-    "Oversight acceptance: D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) on feature/flavorweave-alpha-remediation @ 94a67dd5 (runtime ac9e520a)",
-    "Implement D-04, D-05, D-06 when scheduled (approved, not yet implemented)",
-    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; loops still 0; no production writes)",
+    "Oversight acceptance: D-01 (Plan \u2192 Shop \u2192 Cook \u2192 Rate) \u2014 Cycle 3B implementation verified @ runtime 991db9e",
+    "Do not start D-04, D-05, or D-06",
+    "HH-001 completes \u22651 Experienced Meal Loop (cook + both rate; CML still 0; no production writes)",
     "Production harbor-eats-app promotion only after explicit migration + acceptance gates (production frozen)"
   ],
   "productState": {
@@ -885,15 +891,18 @@
     "productName": "FlavorWeave",
     "consumerRepo": "elephantharbor/harbor-eats-app",
     "deskRepo": "elephantharbor/harbor-eats",
-    "asOfCt": "2026-10-03",
+    "asOfCt": "2026-10-04",
     "campaignCycle": {
       "id": 3,
-      "label": "Campaign Cycle 3",
+      "phase": "3B",
+      "label": "Campaign Cycle 3B",
+      "phaseFocus": "Household plan authority + final D-01 acceptance check",
       "recruitment": "closed",
       "integration": {
         "branch": "feature/flavorweave-alpha-remediation",
-        "commit": "94a67dd5ccd5162a948324cf85e85bc270c394b2",
-        "productRuntimeCommit": "ac9e520a442fd460f7e2880ef55ac8ca93d9a4aa",
+        "commit": "991db9e4770df6b460d3f9594ce29a114101c33e",
+        "commitNote": "Runtime verified; integration tip docs pending",
+        "productRuntimeCommit": "991db9e4770df6b460d3f9594ce29a114101c33e",
         "mergedToProductionMain": false
       },
       "priorCycle": {
@@ -951,19 +960,20 @@
         }
       ],
       "validationSuite": {
-        "migrationsOk": true,
-        "migrationsCount": 11,
-        "unitTestsPassed": 424,
-        "unitTestFiles": 37,
-        "lint": "clean",
-        "playwrightPassed": 27,
-        "testedProductRuntimeCommit": "ac9e520a442fd460f7e2880ef55ac8ca93d9a4aa",
-        "note": "One test-only Playwright fix; integration tip 94a67dd5 includes docs beyond runtime SHA"
+        "implementationVerified": true,
+        "testedProductRuntimeCommit": "991db9e4770df6b460d3f9594ce29a114101c33e",
+        "note": "Cycle 3B verification on runtime 991db9e; integration tip docs commit pending"
       },
-      "carryForwardPolish": [
+      "cycle3BVerified": [
+        "Server-discoverable dinner plans; localStorage cache only",
+        "Multi-context invite join without share URL",
+        "Toast no-op fixed (line_id false positive)",
+        "History includes dinner-plan fully_rated meals"
+      ],
+      "carryForwardKnown": [
         "Tonight overflow",
         "Mark all bought",
-        "Other campaign-doc polish items (known, not acceptance blockers)"
+        "Other campaign-doc follow-ups (known, not acceptance blockers)"
       ],
       "mealCatalog": {
         "structurallyValidatedCount": 24,
@@ -982,10 +992,9 @@
       },
       "isolatedPreview": {
         "url": "https://harbor-eats-cycle1-preview.pages.dev",
-        "pagesBundle": "fw-sw-v10",
+        "pagesBundle": "fw-sw-v16",
         "d1": "preview D1",
         "d1InstanceId": "65bc636d-7048-4e58-900b-9066edf6509f",
-        "deploymentId": "198cefc0-5510-44af-95bf-2bca85a8816b",
         "migrationsApplied": "0001",
         "migrationsThrough": "0011",
         "isProduction": false,
